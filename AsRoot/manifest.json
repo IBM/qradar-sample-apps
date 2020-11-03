@@ -1,0 +1,16 @@
+{
+  "name": "As Root Sample",
+  "description": "App showing using the as_root feature",
+  "version": "1.0",
+  "uuid": "e0fb0e40-7757-4f62-b14b-176a0f63fb3d",
+  "image": "qradar-app-base:2.0.0",
+  "areas": [
+    {
+      "id": "QAsRoot",
+      "text": "As Root Sample",
+      "description": "As Root Sample area",
+      "url": "index",
+      "required_capabilities": []
+    }
+  ]
+}
