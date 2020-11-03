@@ -1,4 +1,4 @@
-# QRadar Sample Apps
+# QRadar sample apps
 
 This repository holds a number of QRadar sample apps, built using v2 of the QRadar App Framework. These apps are
 based on the Red Hat Universal Base Image, not the old CentOS 6 app image.
