@@ -1,4 +1,4 @@
-# com.ibm.si.NGINX
+# NGINX
 
 This sample app shows how to replace Flask with NGINX using Supervisord configuration.
 
@@ -56,3 +56,23 @@ a `debug` file to respond to QRadar `/debug` healthchecks.
 
 The app manifest disables Flask, sets up an area in the QRadar UI, and specifies a named service to run on port `5000`
 (the default port) to expose the NGINX server.
+
+## Running this app
+
+You can run this app locally by executing in this directory:
+
+```bash
+qapp run
+```
+
+Or you can package this app and deploy it by executing in this directory:
+
+```bash
+qapp package -p as_root.zip
+```
+
+and
+
+```bash
+qapp deploy -p as_root.zip -q <qradar console ip> -u <qradar user>
+```
