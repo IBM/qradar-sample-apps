@@ -46,13 +46,7 @@ This will output the compiled and bundled JS code to `app/static/main.js`
 
 ## Running this app
 
-You can run this app locally by executing in this directory:
-
-```bash
-qapp run
-```
-
-Or you can package this app and deploy it by executing in this directory:
+You can package this app and deploy it by executing in this directory:
 
 ```bash
 qapp package -p as_root.zip
