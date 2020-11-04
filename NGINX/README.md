@@ -33,21 +33,21 @@ ls container/rpm/ | grep -v "ordering.txt" > container/rpm/ordering.txt
 
 NGINX RPMs are found in `container/rpm`, alongside a `ordering.txt` detailing which RPMs to install.
 
-## Supervisor Configuration
+## Supervisor configuration
 
 The Supervisor configuration is in `container/conf/supervisord.d`, specifically
 `container/conf/supervisord.d/nginx.conf` which defines how the NGINX process is run.
 
-## NGINX Configuration
+## NGINX configuration
 
 NGINX itself is configured with the `container/conf/nginx/nginx.conf` configuration file.
 
-## Build Scripts
+## Build scripts
 
 Build scripts to set up a temporary directory for NGINX are in `container/build`, with a `build.sh` file and an
 `ordering.txt` which holds a reference to the build script.
 
-## App Content
+## App content
 
 App content served through NGINX is in `app/`, including a simple `index.html` file for populating the app area, and
 a `debug` file to respond to QRadar `/debug` healthchecks.
