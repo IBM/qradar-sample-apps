@@ -1,10 +1,20 @@
-# Copyright 2020 IBM Corporation All Rights Reserved.
+# Copyright 2020 IBM Corporation
 #
-# SPDX-License-Identifier: Apache-2.0
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
 lint:
 	find . -name "*app" -not -path "./NGINX/*" | xargs pylint || exit 1
 
 beautify:
 	find . -name "*app"  -not -path "./NGINX/*" | xargs yapf --style pep8 -p -i -r
-	find . -name "*.json" | xargs -I@ bash -c "cat @ | jq . > tmp.json && mv tmp.json @"
+	find . -name "*.json" -not -path "*/node_modules/*" | xargs -I@ bash -c "cat @ | jq . > tmp.json && mv tmp.json @"
