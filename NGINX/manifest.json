@@ -1,0 +1,24 @@
+{
+  "name": "NGINX App",
+  "description": "App using supervisor configuration to replace Flask with NGINX",
+  "version": "1.0.0",
+  "uuid": "5ecb889a-ee4b-4df1-b756-426338ed8daf",
+  "image": "qradar-app-base:2.0.0",
+  "load_flask": "false",
+  "areas": [
+    {
+      "id": "NGINXArea",
+      "text": "Area served through NGINX",
+      "description": "Area that serves content from NGINX",
+      "url": "index.html",
+      "required_capabilities": []
+    }
+  ],
+  "services": [
+    {
+      "name": "nginx",
+      "port": 5000,
+      "version": "1.0"
+    }
+  ]
+}
