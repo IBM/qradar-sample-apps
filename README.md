@@ -18,6 +18,8 @@ required Python modules.
 ## Samples
 
 - [Running a command as root during app startup](./AsRoot)
+- [App that supports multi-tenancy](./Multitenancy)
+- [App that use NGINX rather than Flask](./NGINX)
 
 ## Project details
 

@@ -14,5 +14,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Create a new user called 'testuser', with a home directory (/home/testuser)
-as_root adduser testuser -m
+mkdir -p /opt/app-root/tmp
