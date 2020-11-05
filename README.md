@@ -21,6 +21,8 @@ required Python modules.
 - [App that supports multi-tenancy](./Multitenancy)
 - [App that uses NGINX rather than Flask](./NGINX)
 - [App that retrieves proxy values](./Proxy)
+- [QJSLib imported through the browser](./QJSLibBrowser)
+- [QJSLib imported through NPM](./QJSLibNPM)
 
 ## Project details
 

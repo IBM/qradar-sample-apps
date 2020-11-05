@@ -1,0 +1,16 @@
+{
+  "name": "QJSLib as a browser import",
+  "description": "App showing how to use QJSLib imported in the browser",
+  "version": "1.0.0",
+  "uuid": "9ad7c764-28c0-491d-9d5a-b2bfec346a11",
+  "image": "qradar-app-base:2.0.0",
+  "areas": [
+    {
+      "id": "QQJSLibBrowser",
+      "text": "QJSLib",
+      "description": "Area displaying QJSLib functionality",
+      "url": "index",
+      "required_capabilities": []
+    }
+  ]
+}

@@ -12,10 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-[program:nginx]
-command=/usr/sbin/nginx -c /opt/app-root/container/conf/nginx/nginx.conf
-directory=/opt/app-root/app
-autostart=true
-autorestart=true
-stderr_logfile=/opt/app-root/store/log/nginx.log
-stdout_logfile=/opt/app-root/store/log/nginx.log
+from flask import Blueprint, render_template
+
+# pylint: disable=invalid-name
+viewsbp = Blueprint('viewsbp', __name__, url_prefix='/')
+
+
+# Simple endpoint that returns index.html, all work is done client side
+# with QJSLib
+@viewsbp.route('/index')
+def index():
+    return render_template('index.html')
