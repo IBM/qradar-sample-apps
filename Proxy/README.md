@@ -48,7 +48,7 @@ The setting `APP_PROXY_ENV_VARIABLES_ENABLED` in the `nva.conf` file determines 
 If `APP_PROXY_ENV_VARIABLES_ENABLED=true` or `APP_PROXY_ENV_VARIABLES_ENABLED` is not explicitly set the variables are
 injected, if `APP_PROXY_ENV_VARIABLES_ENABLED=false` they are not injected.
 
-## Testing this App
+## Testing this app
 
 Testing this app requires QRadar to be configured with a proxy, which can be configured by going to
 *Admin -> Auto Updates -> Change Settings -> Advanced* and filling in the proxy values.
