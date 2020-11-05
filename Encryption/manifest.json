@@ -1,0 +1,16 @@
+{
+  "name": "QPyLib Encryption Sample",
+  "description": "How to use the QPyLib encdec module to handle secret encryption and decryption",
+  "version": "1.0",
+  "uuid": "b551c402-47a1-4c6c-b4de-d360e0b0385d",
+  "image": "qradar-app-base:2.0.0",
+  "areas": [
+    {
+      "id": "QEncryption",
+      "text": "Encryption",
+      "description": "Encryption area",
+      "url": "index",
+      "required_capabilities": []
+    }
+  ]
+}
