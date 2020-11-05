@@ -17,6 +17,7 @@ required Python modules.
 
 ## Samples
 
+- [Using the QPyLib Ariel features](./Ariel)
 - [Running a command as root during app startup](./AsRoot)
 - [Using QPyLib to encrypt values](./Encryption)
 - [App that supports multi-tenancy](./Multitenancy)
