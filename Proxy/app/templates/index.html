@@ -1,0 +1,40 @@
+<!--
+Copyright 2020 IBM Corporation
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Proxy</title>
+  </head>
+  <body>
+    <h1 id="title">QRadar Proxy Values</h1>
+    {% if proxy_set %}
+    <p id="qradar-https-proxy-label">QRADAR_HTTPS_PROXY:
+      <span id="qradar-https-proxy">{{ qradar_https_proxy }}</span>
+    </p>
+    <p id="qradar-http-proxy-label">QRADAR_HTTP_PROXY:
+      <span id="qradar-http-proxy">{{ qradar_http_proxy }}</span>
+    </p>
+    <p id="qradar-no-proxy-label">QRADAR_NO_PROXY:
+      <span id="qradar-no-proxy">{{ qradar_no_proxy }}</span>
+    </p>
+    <p id="qradar-assistant-downloads-label">QRadar Assistant Downloads:
+      <span id="qradar-assistant-downloads">{{ download_count }}</span>
+    </p>
+    {% else %}
+    <p id="no-proxy-set">No QRadar proxy set, set one in Admin -> Auto Updates -> Change Settings -> Advanced</p>
+    {% endif %}
+  </body>
+</html>
