@@ -1,0 +1,43 @@
+<!--
+Copyright 2020 IBM Corporation
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QPyLib Encryption App</title>
+  </head>
+  <body>
+    <h1 id="title">QPyLib Encryption App</h1>
+    <h2>Encrypt</h2>
+    <input id="encrypt-key-input" type="text" placeholder="key"/>
+    <input id="encrypt-value-input" type="text" placeholder="value"/>
+    <input id="encrypt-submit" type="submit"/>
+    <h2>Decrypt</h2>
+    <input id="decrypt-key-input" type="text" placeholder="key"/>
+    <input id="decrypt-submit" type="submit"/>
+    <script>
+      document.getElementById("encrypt-submit").addEventListener("click", function() {
+        var key = document.getElementById("encrypt-key-input").value;
+        var val = document.getElementById("encrypt-value-input").value;
+        window.location.href = "./encrypt/" + key + "?val=" + val;
+      });
+
+      document.getElementById("decrypt-submit").addEventListener("click", function() {
+        var key = document.getElementById("decrypt-key-input").value;
+        window.location.href = "./decrypt/" + key;
+      });
+    </script>
+  </body>
+</html>

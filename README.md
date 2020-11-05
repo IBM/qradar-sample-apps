@@ -18,6 +18,7 @@ required Python modules.
 ## Samples
 
 - [Running a command as root during app startup](./AsRoot)
+- [Using QPyLib to encrypt values](./Encryption)
 - [App that supports multi-tenancy](./Multitenancy)
 - [App that uses NGINX rather than Flask](./NGINX)
 - [App that retrieves proxy values](./Proxy)
