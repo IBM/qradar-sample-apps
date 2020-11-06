@@ -31,11 +31,11 @@ qapp run
 Or you can package this app and deploy it by executing in this directory:
 
 ```bash
-qapp package -p as_root.zip
+qapp package -p app.zip
 ```
 
 and
 
 ```bash
-qapp deploy -p as_root.zip -q <qradar console ip> -u <qradar user>
+qapp deploy -p app.zip -q <qradar console ip> -u <qradar user>
 ```
