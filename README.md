@@ -22,6 +22,7 @@ required Python modules.
 - [Running a command as root during app startup](./AsRoot)
 - [Controlling browser cache](./CacheControl)
 - [Using QPyLib to encrypt values](./Encryption)
+- [Replacing Flask with Gunicorn](./Gunicorn)
 - [App that supports multi-tenancy](./Multitenancy)
 - [App that uses NGINX rather than Flask](./NGINX)
 - [App that retrieves proxy values](./Proxy)

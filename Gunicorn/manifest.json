@@ -1,0 +1,24 @@
+{
+  "name": "Gunicorn supervisord",
+  "description": "Custom supervisord configuration which starts gunicorn as a replacement for flask and exposes port 5000 as the webserver port",
+  "version": "1.0.0",
+  "uuid": "447be4f3-1da4-4670-8fed-cd5f313bdd18",
+  "image": "qradar-app-base:2.0.0",
+  "load_flask": "false",
+  "areas": [
+    {
+      "id": "GunicornSupervisordTab",
+      "text": "Gunicorn supervisord",
+      "description": "Dummy tab that displays text from the flask app",
+      "url": "index",
+      "required_capabilities": []
+    }
+  ],
+  "services": [
+    {
+      "name": "gunicorn",
+      "port": 5000,
+      "version": "1.0"
+    }
+  ]
+}
