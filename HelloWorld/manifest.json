@@ -1,0 +1,16 @@
+{
+  "name": "Hello World App",
+  "description": "Simple Hello World flask app",
+  "version": "1.0.0",
+  "uuid": "0616bdb3-1c7a-4acf-89a2-4dc726e010bf",
+  "image": "qradar-app-base:2.0.0",
+  "areas": [
+    {
+      "id": "HelloWorldTab",
+      "text": "HelloWorld ",
+      "description": "Dummy tab that displays text from the flask app",
+      "url": "index",
+      "required_capabilities": []
+    }
+  ]
+}
