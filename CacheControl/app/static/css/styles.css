@@ -14,44 +14,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-h2 {
-  margin: 0px 10px;
-}
-
-.container {
-  width: 600px;
-  margin: 0px 10px;
-}
-
-.container h3 {
-  margin: 5px 0px;
-}
-
-.search_box {
-  background-color: #EAEAEA;
-  border-bottom: 1px solid #CCC;
-  padding: 10px 15px;
-}
-
-.search_box input[type="text"] {
-  width: 250px;
-}
-
-.output {
-  background-color: #e6e6e659;
-  border-bottom: 1px solid #CCC;
-  height: 200px;
-  padding: 1px 15px;
-  display: none;
-}
-
-.output h4 {
-  margin: 5px 0px;
-}
-
-.output pre {
-  margin: 0px 0px;
-  padding: 0px;
-  overflow-y: auto;
-  height: 160px;
+body {
+    font-family: Arial, sans-serif;
 }

@@ -20,6 +20,7 @@ required Python modules.
 - [Replacing Flask with an Alternative HTTP Server](./AlternativeHTTPServer)
 - [Using the QPyLib Ariel features](./Ariel)
 - [Running a command as root during app startup](./AsRoot)
+- [Controlling browser cache](./CacheControl)
 - [Using QPyLib to encrypt values](./Encryption)
 - [App that supports multi-tenancy](./Multitenancy)
 - [App that uses NGINX rather than Flask](./NGINX)
