@@ -23,6 +23,7 @@ required Python modules.
 - [Controlling browser cache](./CacheControl)
 - [Using QPyLib to encrypt values](./Encryption)
 - [Replacing Flask with Gunicorn](./Gunicorn)
+- [Designating how much memory an app needs](./Memory)
 - [App that supports multi-tenancy](./Multitenancy)
 - [App that uses NGINX rather than Flask](./NGINX)
 - [App that retrieves proxy values](./Proxy)
