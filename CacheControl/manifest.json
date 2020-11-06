@@ -1,0 +1,16 @@
+{
+  "name": "Cache Control",
+  "description": "A sample app showing how to bypass the browser cache when external static content changes.",
+  "version": "1.0",
+  "uuid": "69d47336-2f33-4331-8624-5f4fb5d90458",
+  "image": "qradar-app-base:2.0.0",
+  "areas": [
+    {
+      "id": "QCacheControl",
+      "text": "Cache Control",
+      "description": "A sample app showing how to bypass the browser cache when external static content changes.",
+      "url": "index",
+      "required_capabilities": []
+    }
+  ]
+}
