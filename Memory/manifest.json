@@ -1,0 +1,21 @@
+{
+  "name": "Memory Resource",
+  "description": "Hello World with extra memory!",
+  "version": "1.0",
+  "uuid": "563515f3-36e3-4062-9165-c9a137c98b0d",
+  "image": "qradar-app-base:2.0.0",
+  "areas": [
+    {
+      "description": "A Hello World app with extra memory",
+      "id": "QMemoryResource",
+      "required_capabilities": [
+        "ADMIN"
+      ],
+      "text": "Hello World",
+      "url": "index"
+    }
+  ],
+  "resources": {
+    "memory": 300
+  }
+}
