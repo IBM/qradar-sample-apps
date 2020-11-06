@@ -1,0 +1,29 @@
+{
+  "name": "Alternative HTTP Service Demo",
+  "description": "An application demonstrating using a simple named service rather than Flask to serve its content.",
+  "version": "1.0",
+  "uuid": "4a90eb04-cb6e-11ea-87d0-0242ac130003",
+  "image": "qradar-app-base:2.0.0",
+  "load_flask": "false",
+  "areas": [
+    {
+      "description": "A simple example of a small named service serving output.",
+      "id": "Demo Python HTTP Server",
+      "named_service": "pythonhttpserver",
+      "required_capabilities": [],
+      "text": "Directory Listing",
+      "url": "/"
+    }
+  ],
+  "services": [
+    {
+      "command": "python3 -m http.server 5000",
+      "directory": "/opt/app-root/app/",
+      "endpoints": [],
+      "name": "pythonhttpserver",
+      "path": "/",
+      "port": 5000,
+      "version": "1"
+    }
+  ]
+}

@@ -17,6 +17,7 @@ required Python modules.
 
 ## Samples
 
+- [Replacing Flask with an Alternative HTTP Server](./AlternativeHTTPServer)
 - [Using the QPyLib Ariel features](./Ariel)
 - [Running a command as root during app startup](./AsRoot)
 - [Using QPyLib to encrypt values](./Encryption)
