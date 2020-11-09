@@ -1,0 +1,41 @@
+<!--
+Copyright 2020 IBM Corporation
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QuickScan</title>
+    <link href="./static/css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+    <h3>QuickScan</h3>
+    <h4>Create Scan Profile</h4>
+    <div class="inputs">
+      <label for="">Scan Profile Name: </label>
+      <input type="text" name="scan_profile" id="scan_profile" value="" placeholder="Profile Name"><p />
+      <label for="">IP Address(es): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+      <input type="text" name="ip_addresses" id="ip_addresses" value="" placeholder="0.0.0.0, 1.1.1.1 etc ..."><p />
+      <hr />
+      <button type="button" name="create_profile" id="create_profile">Create Profile</button>
+      <button type="button" name="create_profile_and_run" id="create_profile_and_run">Create Profile and Run</button>
+      <hr />
+    </div>
+      <span id="output"></span>
+    </div>
+    <script type="text/javascript" src="./static/qjslib/qappfw.min.js"></script>
+    <script type="text/javascript" src="./static/js/quickscan.js"></script>
+  </body>
+</html>

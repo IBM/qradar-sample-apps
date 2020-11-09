@@ -30,6 +30,7 @@ required Python modules.
 - [App that retrieves proxy values](./Proxy)
 - [QJSLib imported through the browser](./QJSLibBrowser)
 - [QJSLib imported through NPM](./QJSLibNPM)
+- [App that allows user submitted QRadar Vulnerability Manager scans](./QuickScan)
 
 ## Project details
 
