@@ -1,0 +1,28 @@
+{
+  "name": "Dashboardimages",
+  "description": "A dashboard with images",
+  "version": "1.0.3",
+  "uuid": "b5a22da0-c758-11ea-87d0-0242ac130003",
+  "image": "qradar-app-base:2.0.0",
+  "dashboard_items": [
+    {
+      "text": "Example Item",
+      "description": "Another Example dashboard item that is going to show some html with an image",
+      "rest_method": "getExampleDashboardItem",
+      "required_capabilities": [
+        "ADMIN"
+      ]
+    }
+  ],
+  "rest_methods": [
+    {
+      "name": "getExampleDashboardItem",
+      "url": "/getExampleDashboardItem",
+      "method": "GET",
+      "argument_names": [],
+      "required_capabilities": [
+        "ADMIN"
+      ]
+    }
+  ]
+}
