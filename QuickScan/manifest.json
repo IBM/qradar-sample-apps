@@ -1,0 +1,16 @@
+{
+  "name": "QuickScan",
+  "description": "An application tab that allows the user to submit QVM scans.",
+  "version": "1.0",
+  "image": "qradar-app-base:2.0.0",
+  "uuid": "bd640d10-9487-429a-a21b-fcfdb0aa8763",
+  "areas": [
+    {
+      "id": "QuickScan",
+      "text": "QuickScan",
+      "description": "QuickScan",
+      "url": "quickscan",
+      "required_capabilities": []
+    }
+  ]
+}
