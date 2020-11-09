@@ -1,0 +1,25 @@
+{
+  "name": "REST method app",
+  "description": "Demonstrates REST method used by dashboard item",
+  "version": "1.0.3",
+  "uuid": "33ed29d0-39b7-45cc-8b32-420919eac36c",
+  "image": "qradar-app-base:2.0.0",
+  "rest_methods": [
+    {
+      "name": "getArielDBList",
+      "url": "/getArielDBList",
+      "method": "GET",
+      "argument_names": []
+    }
+  ],
+  "dashboard_items": [
+    {
+      "text": "Ariel DB names",
+      "description": "Dashboard item that populates a dropdown using REST method",
+      "rest_method": "getArielDBList",
+      "required_capabilities": [
+        "ADMIN"
+      ]
+    }
+  ]
+}
