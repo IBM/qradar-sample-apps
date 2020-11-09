@@ -22,6 +22,7 @@ required Python modules.
 - [Running a command as root during app startup](./AsRoot)
 - [Controlling browser cache](./CacheControl)
 - [Using QPyLib to encrypt values](./Encryption)
+- [App that uses GUI Actions](./GUIActions)
 - [Replacing Flask with Gunicorn](./Gunicorn)
 - [Simple 'hello world' app](./HelloWorld)
 - [Designating how much memory an app needs](./Memory)
