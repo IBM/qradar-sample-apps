@@ -1,2 +1,3 @@
 *.rpm
 *.whl
+*.tar.gz

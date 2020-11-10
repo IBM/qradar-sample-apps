@@ -1,0 +1,40 @@
+{
+  "name": "hellog11n.app.name",
+  "description": "hellog11n.app.desc",
+  "version": "1.0.3",
+  "uuid": "3eae901e-c12a-11ea-b3de-0242ac130004",
+  "image": "qradar-app-base:2.0",
+  "areas": [
+    {
+      "id": "hellog11n.app.id",
+      "text": "hellog11n.app.name",
+      "description": "hellog11n.app.desc",
+      "url": "index",
+      "required_capabilities": [
+        "ADMIN"
+      ]
+    }
+  ],
+  "resource_bundles": [
+    {
+      "locale": "en_US",
+      "bundle": "resources/hello_en_US.properties"
+    },
+    {
+      "locale": "es",
+      "bundle": "resources/hello_es.properties"
+    },
+    {
+      "locale": "fr",
+      "bundle": "resources/hello_fr.properties"
+    },
+    {
+      "locale": "en",
+      "bundle": "resources/hello_en.properties"
+    },
+    {
+      "locale": "ja",
+      "bundle": "resources/hello_ja.properties"
+    }
+  ]
+}
