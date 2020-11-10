@@ -27,6 +27,7 @@ required Python modules.
 - [App that uses GUI Actions](./GUIActions)
 - [Replacing Flask with Gunicorn](./Gunicorn)
 - [Simple 'hello world' app](./HelloWorld)
+- [A globalized 'hello world' app](./HelloWorldGlobalized)
 - [Designating how much memory an app needs](./Memory)
 - [App that supports multi-tenancy](./Multitenancy)
 - [App that uses NGINX rather than Flask](./NGINX)
