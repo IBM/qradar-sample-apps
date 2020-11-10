@@ -23,6 +23,7 @@ required Python modules.
 - [Controlling browser cache](./CacheControl)
 - [App that provides a dashboard item with an image](./DashboardWithImage)
 - [Using QPyLib to encrypt values](./Encryption)
+- [App that uses GUI Actions](./GUIActions)
 - [Replacing Flask with Gunicorn](./Gunicorn)
 - [Simple 'hello world' app](./HelloWorld)
 - [Designating how much memory an app needs](./Memory)

@@ -1,0 +1,537 @@
+{
+  "name": "Passing IDs - GUI Actions Example",
+  "description": "Sample using GUI actions with log and network activities, offenses, assets, and vulnerabilies pages",
+  "version": "1.0.0",
+  "uuid": "8c58b50e-bf8d-11ea-b3de-0242ac130004",
+  "image": "qradar-app-base:2.0.0",
+  "rest_methods": [
+    {
+      "name": "listFunction",
+      "url": "/listFunction",
+      "method": "GET",
+      "argument_names": [
+        "appContext"
+      ]
+    }
+  ],
+  "gui_actions": [
+    {
+      "id": "AttackerListToolbarButton",
+      "text": "AttackerList pass IDs",
+      "description": "Pass IDs for AttackerList",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "AttackerListToolbar"
+      ]
+    },
+    {
+      "id": "TargetListToolbarButton",
+      "text": "TargetList pass IDs",
+      "description": "Pass IDs for TargetList",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "TargetListToolbar"
+      ]
+    },
+    {
+      "id": "NetworkListToolbarButton",
+      "text": "NetworkList pass IDs NetworkList",
+      "description": "Pass IDs for Network List",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "NetworkListToolbar"
+      ]
+    },
+    {
+      "id": "NetworkSummaryToolbarButton",
+      "text": "NetworkSummary pass IDs Network Summary",
+      "description": "Pass IDs for Network Summary Tool",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "NetworkSummaryToolbar"
+      ]
+    },
+    {
+      "id": "OffenseListToolbarButton",
+      "text": "Offense pass IDs",
+      "description": "Pass IDs for offenses",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "OffenseListToolbar"
+      ]
+    },
+    {
+      "id": "NetworkListToolbarButton",
+      "text": "Network pass IDs",
+      "description": "Pass IDs for flows",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "arielListToolbar"
+      ]
+    },
+    {
+      "id": "EventListToolbarButton",
+      "text": "Event pass IDs",
+      "description": "Pass IDs for events",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "customEventListToolbar"
+      ]
+    },
+    {
+      "id": "AssetDetailsToolbarButton",
+      "text": "pass IDs for Asset Details",
+      "description": "Pass IDs for Asset Details",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "AssetDetailsToolbar"
+      ]
+    },
+    {
+      "id": "AssetListToolbarButton",
+      "text": "pass IDs for Asset List",
+      "description": "Pass IDs for Asset List",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "AssetListToolbar"
+      ]
+    },
+    {
+      "id": "AssetOwnerToolbarButton",
+      "text": "AssetOwner pass IDs",
+      "description": "Pass IDs for Asset Owner",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "AssetOwnerToolbar"
+      ]
+    },
+    {
+      "id": "byassetListToolbarButton",
+      "text": "asset list pass IDs",
+      "description": "Pass IDs for Asset List",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "ByAssetListFormToolbar"
+      ]
+    },
+    {
+      "id": "bynetworkListToolbarButton",
+      "text": "by network list pass IDs",
+      "description": "Pass IDs for by Network List",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "ByNetworkListToolbar"
+      ]
+    },
+    {
+      "id": "byopenservicesListToolbarButton",
+      "text": "by open services list pass IDs",
+      "description": "Pass IDs for Open Services List",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "ByOpenServiceListToolbar"
+      ]
+    },
+    {
+      "id": "exceptionListToolbarButton",
+      "text": "exception list pass IDs",
+      "description": "Pass IDs for Exception List",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "ExceptionRulesListToolbar"
+      ]
+    },
+    {
+      "id": "myassignedvulnsListToolbarButton",
+      "text": "my assigned vulns list pass IDs",
+      "description": "Pass IDs for My Assigned Vulnerabilites List",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "MyAssignedVulnerabilitiesListToolbar"
+      ]
+    },
+    {
+      "id": "VulnerabilityManagementListPopup",
+      "text": "Pass IDs for Vulnerability Management List",
+      "description": "Pass IDs for Vulnerability Management List",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "VulnerabilityManagementListPopup"
+      ]
+    },
+    {
+      "id": "ipPopup",
+      "text": "ipPopup",
+      "description": "IP Popup",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "ipPopup"
+      ]
+    },
+    {
+      "id": "userNamePopup",
+      "text": "User Name Popup",
+      "description": "User Name Popup ",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "userNamePopup"
+      ]
+    },
+    {
+      "id": "ReferenceSetsToolbarButton",
+      "text": "ReferenceSets pass IDs",
+      "description": "Pass IDs for Reference Sets",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "ReferenceSetsToolbar"
+      ]
+    },
+    {
+      "id": "ReferenceSetsContextMenu",
+      "text": "ReferenceSetsContextMenu pass IDs",
+      "description": "Pass IDs for Reference Sets Context Menu",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "ReferenceSetsContextMenu"
+      ]
+    },
+    {
+      "id": "ReferenceSetRulesToolbar",
+      "text": "ReferenceSetRulesToolbar pass IDs",
+      "description": "Pass IDs for Reference Set Rules",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "ReferenceSetRulesToolbar"
+      ]
+    },
+    {
+      "id": "ReferenceSetRulesContextMenu",
+      "text": "ReferenceSetRulesContextMenu pass IDs",
+      "description": "Pass IDs for Reference SetRules Context Menu",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "ReferenceSetRulesContextMenu"
+      ]
+    },
+    {
+      "id": "ReferenceSetElemsToolbarButton",
+      "text": "ReferenceSetElemsToolbar pass IDs",
+      "description": "Pass IDs for Reference Set ElemsToolbar",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "ReferenceSetElemsToolbar"
+      ]
+    },
+    {
+      "id": "ReferenceSetElemsContextMenu",
+      "text": "ReferenceSetElemsContextMenu pass IDs",
+      "description": "Pass IDs for Reference Set Elems Context Menu",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "ReferenceSetElemsContextMenu"
+      ]
+    },
+    {
+      "id": "DomainListToolbarButton",
+      "text": "DomainList pass IDs",
+      "description": "Pass IDs for Domain List",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "DomainListToolbar"
+      ]
+    },
+    {
+      "id": "NetworkHierarchyListToolbarButton",
+      "text": "NetworkHierarchyList pass IDs",
+      "description": "Pass IDs for Network Hierarchy List",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "NetworkHierarchyListToolbar"
+      ]
+    },
+    {
+      "id": "SensorDeviceListToolbarButton",
+      "text": "SensorDeviceList pass IDs",
+      "description": "Pass IDs for Sensor Device List",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "SensorDeviceListToolbar"
+      ]
+    },
+    {
+      "id": "FlowsourceListToolbarButton",
+      "text": "FlowsourceList pass IDs",
+      "description": "Pass IDs for Flow Source List",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "FlowsourceListToolbar"
+      ]
+    },
+    {
+      "id": "VaScannersListToolbarButton",
+      "text": "VaScannersList pass IDs",
+      "description": "Pass IDs for VaScanners List",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "VaScannersListToolbar"
+      ]
+    },
+    {
+      "id": "VaScannerSchedulesListToolbarButton",
+      "text": "VaScannerSchedulesList pass IDs",
+      "description": "Pass IDs for VaScanner Schedules List",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "VaScannerSchedulesListToolbar"
+      ]
+    },
+    {
+      "id": "TenantListToolbarButton",
+      "text": "TenantList pass IDs",
+      "description": "Pass IDs for Tenant List",
+      "icon": "static/images/bookmarks_small.png",
+      "rest_method": "listFunction",
+      "javascript": "my_toolbar_button_action(result)",
+      "groups": [
+        "TenantListToolbar"
+      ]
+    }
+  ],
+  "page_scripts": [
+    {
+      "app_name": "SEM",
+      "page_id": "AttackerList",
+      "scripts": [
+        "static/js/custom_script.js"
+      ]
+    },
+    {
+      "app_name": "SEM",
+      "page_id": "TargetList",
+      "scripts": [
+        "static/js/custom_script.js"
+      ]
+    },
+    {
+      "app_name": "SEM",
+      "page_id": "NetworkList",
+      "scripts": [
+        "static/js/custom_script.js"
+      ]
+    },
+    {
+      "app_name": "SEM",
+      "page_id": "NetworkOffenseList",
+      "scripts": [
+        "static/js/custom_script.js"
+      ]
+    },
+    {
+      "app_name": "SEM",
+      "page_id": "OffenseList",
+      "scripts": [
+        "static/js/custom_script.js"
+      ]
+    },
+    {
+      "app_name": "Surveillance",
+      "page_id": "FlowList",
+      "scripts": [
+        "static/js/custom_script.js"
+      ]
+    },
+    {
+      "app_name": "EventViewer",
+      "page_id": "EventList",
+      "scripts": [
+        "static/js/custom_script.js"
+      ]
+    },
+    {
+      "app_name": "Assets",
+      "page_id": "AssetDetailsVulnList",
+      "scripts": [
+        "static/js/custom_script.js"
+      ]
+    },
+    {
+      "app_name": "Assets",
+      "page_id": "AssetList",
+      "scripts": [
+        "static/js/custom_script.js"
+      ]
+    },
+    {
+      "app_name": "assetprofile",
+      "page_id": "AssetOwner",
+      "scripts": [
+        "static/js/custom_script.js"
+      ]
+    },
+    {
+      "app_name": "assetprofile",
+      "page_id": "ByAssetListForm",
+      "scripts": [
+        "static/js/custom_script.js"
+      ]
+    },
+    {
+      "app_name": "assetprofile",
+      "page_id": "ByNetworkList",
+      "scripts": [
+        "static/js/custom_script.js"
+      ]
+    },
+    {
+      "app_name": "assetprofile",
+      "page_id": "ByOpenServiceList",
+      "scripts": [
+        "static/js/custom_script.js"
+      ]
+    },
+    {
+      "app_name": "assetprofile",
+      "page_id": "ExceptionRulesList",
+      "scripts": [
+        "static/js/custom_script.js"
+      ]
+    },
+    {
+      "app_name": "assetprofile",
+      "page_id": "MyAssignedVulnerabilitiesList",
+      "scripts": [
+        "static/js/custom_script.js"
+      ]
+    },
+    {
+      "app_name": "QRadar",
+      "page_id": "ReferenceSets",
+      "scripts": [
+        "static/js/custom_script.js"
+      ]
+    },
+    {
+      "app_name": "QRadar",
+      "page_id": "ReferenceSetElems",
+      "scripts": [
+        "static/js/custom_script.js"
+      ]
+    },
+    {
+      "app_name": "QRadar",
+      "page_id": "ReferenceSetRules",
+      "scripts": [
+        "static/js/custom_script.js"
+      ]
+    },
+    {
+      "app_name": "QRadar",
+      "page_id": "DomainList",
+      "scripts": [
+        "static/js/custom_script.js"
+      ]
+    },
+    {
+      "app_name": "QRadar",
+      "page_id": "NetworkHierarchyList",
+      "scripts": [
+        "static/js/custom_script.js"
+      ]
+    },
+    {
+      "app_name": "EventViewer",
+      "page_id": "SensorDeviceList",
+      "scripts": [
+        "static/js/custom_script.js"
+      ]
+    },
+    {
+      "app_name": "Surveillance",
+      "page_id": "FlowsourceList",
+      "scripts": [
+        "static/js/custom_script.js"
+      ]
+    },
+    {
+      "app_name": "Assets",
+      "page_id": "VaScannersList",
+      "scripts": [
+        "static/js/custom_script.js"
+      ]
+    },
+    {
+      "app_name": "Assets",
+      "page_id": "VaScannerSchedulesList",
+      "scripts": [
+        "static/js/custom_script.js"
+      ]
+    },
+    {
+      "app_name": "QRadar",
+      "page_id": "TenantList",
+      "scripts": [
+        "static/js/custom_script.js"
+      ]
+    }
+  ]
+}
