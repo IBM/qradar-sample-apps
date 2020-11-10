@@ -21,6 +21,7 @@ required Python modules.
 - [Using the QPyLib Ariel features](./Ariel)
 - [Running a command as root during app startup](./AsRoot)
 - [Controlling browser cache](./CacheControl)
+- [App that provides a dashboard item with an image](./DashboardWithImage)
 - [Using QPyLib to encrypt values](./Encryption)
 - [App that uses GUI Actions](./GUIActions)
 - [Replacing Flask with Gunicorn](./Gunicorn)
