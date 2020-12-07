@@ -23,8 +23,6 @@ viewsbp = Blueprint('viewsbp', __name__, url_prefix='/')
 
 
 # An endpoint that gets a list of available Ariel databases by calling a python script which uses REST api call.
-# After the app is installed, a 'Deploy' is needed before this app can operate.
-# Please navigate to 'Admin' tab and click 'Deploy Changes'.
 @viewsbp.route('/getArielDatabases')
 def get_ariel_databases():
     response = rest.get_ariel_databases()
