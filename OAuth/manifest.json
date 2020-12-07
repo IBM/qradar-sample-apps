@@ -1,0 +1,26 @@
+{
+  "name": "OAuth",
+  "description": "Demonstrates the manifest authentication entry which allows QRadar to supply authorisation credentials to the app",
+  "version": "1.0.0",
+  "uuid": "83e5e5e8-6147-4c36-bcf9-07e61c09216f",
+  "image": "qradar-app-base:2.0.0",
+  "areas": [
+    {
+      "id": "OAuthDemo",
+      "text": "OAuth demo",
+      "description": "An OAuth app",
+      "required_capabilities": [
+        "SEM"
+      ],
+      "url": "/getArielDatabases"
+    }
+  ],
+  "authentication": {
+    "oauth2": {
+      "authorisation_flow": "CLIENT_CREDENTIALS",
+      "requested_capabilities": [
+        "SEM"
+      ]
+    }
+  }
+}
