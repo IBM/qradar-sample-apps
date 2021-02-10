@@ -18,6 +18,7 @@ required Python modules.
 ## Samples
 
 - [Replacing Flask with an Alternative HTTP Server](./AlternativeHTTPServer)
+- [Determining available QRadar API versions and features](./APIVersion)
 - [Using the QPyLib Ariel features](./Ariel)
 - [Running a command as root during app startup](./AsRoot)
 - [Controlling browser cache](./CacheControl)
@@ -31,6 +32,7 @@ required Python modules.
 - [Designating how much memory an app needs](./Memory)
 - [App that supports multi-tenancy](./Multitenancy)
 - [App that uses NGINX rather than Flask](./NGINX)
+- [App that uses QRadar OAuth to authenticate the app](./OAuth)
 - [App that retrieves proxy values](./Proxy)
 - [QJSLib imported through the browser](./QJSLibBrowser)
 - [QJSLib imported through NPM](./QJSLibNPM)
