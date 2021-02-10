@@ -20,7 +20,7 @@ lint:
 
 beautify:
 	# Python beautify
-	find . -name "*app" | xargs yapf --style pep8 -p -i -r
+	find . -name "*app" | xargs yapf -p -i -r
 	# JSON beautify
 	find . -name "*.json"             \
 		-not -path "*/node_modules/*" \
