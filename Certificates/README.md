@@ -41,6 +41,18 @@ pip download                     \
 
 ## Running this app
 
+To run this sample app locally using the QRadar App SDK, you must use a `qenv.ini` file to inject environment variables
+into the local app container.
+
+The `QRADAR_APP_UUID` is an environment variable used by the encdec Encryption module.
+
+The `qenv.ini` file looks something like this:
+
+```ini
+[app]
+QRADAR_APP_UUID=e7b57727-75e0-42f0-9e28-c4100a8e456c
+```
+
 You can run this app locally by executing in this directory:
 
 ```bash
