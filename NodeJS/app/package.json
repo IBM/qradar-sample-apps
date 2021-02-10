@@ -1,0 +1,11 @@
+{
+  "name": "qradar_nodejs_app",
+  "version": "1.0.0",
+  "description": "Sample QRadar app using a NodeJS express webserver",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "author": "IBM",
+  "license": "Apache-2.0"
+}

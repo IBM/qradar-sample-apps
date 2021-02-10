@@ -1,0 +1,37 @@
+{
+  "name": "NodeJS",
+  "description": "Named service node app",
+  "version": "1.0.0",
+  "uuid": "0ccb8a1c-4b83-44fb-b789-4df94dc55330",
+  "image": "qradar-app-base:2.0.0",
+  "load_flask": "false",
+  "areas": [
+    {
+      "description": "Dummy tab that displays text from the node app",
+      "id": "NodeHelloWorldTab",
+      "named_service": "nodeservice",
+      "required_capabilities": [],
+      "text": "NodeHelloWorld",
+      "url": "/index"
+    }
+  ],
+  "services": [
+    {
+      "command": "node /opt/app-root/app/server.js",
+      "directory": "/opt/app-root/app",
+      "endpoints": [
+        {
+          "name": "appindexpage",
+          "path": "/index",
+          "http_method": "GET"
+        }
+      ],
+      "name": "nodeservice",
+      "path": "/index",
+      "port": 5000,
+      "version": "1",
+      "stdout_logfile": "/opt/app-root/store/log/node_out.log",
+      "stderr_logfile": "/opt/app-root/store/log/node_err.log"
+    }
+  ]
+}
