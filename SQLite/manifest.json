@@ -1,0 +1,16 @@
+{
+  "name": "Sqlite Storage App",
+  "description": "Save and read data from an sqlite database using an html form",
+  "version": "1.0.0",
+  "uuid": "e3260a5b-8c47-4c07-8a5a-8fcc535f60dd",
+  "image": "qradar-app-base:2.0.0",
+  "areas": [
+    {
+      "id": "SqliteStorageTab",
+      "text": "SqliteStorage",
+      "description": "Tab with html form to save data to database",
+      "url": "index",
+      "required_capabilities": []
+    }
+  ]
+}
