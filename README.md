@@ -34,6 +34,7 @@ required Python modules.
 - [App that uses NGINX rather than Flask](./NGINX)
 - [App that uses NodeJS rather than Flask](./NodeJS)
 - [App that uses QRadar OAuth to authenticate the app](./OAuth)
+- [App that uses a PostgreSQL database](./PostgreSQL)
 - [App that retrieves proxy values](./Proxy)
 - [QJSLib imported through the browser](./QJSLibBrowser)
 - [QJSLib imported through NPM](./QJSLibNPM)
