@@ -38,6 +38,7 @@ required Python modules.
 - [QJSLib imported through NPM](./QJSLibNPM)
 - [App that allows user submitted QRadar Vulnerability Manager scans](./QuickScan)
 - [App that uses a REST method to populate a Dashboard Item](./RESTMethod)
+- [App that uses a SQLite database](./SQLite)
 
 ## Project details
 
