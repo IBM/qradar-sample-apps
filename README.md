@@ -33,6 +33,7 @@ required Python modules.
 - [App that supports multi-tenancy](./Multitenancy)
 - [App that uses NGINX rather than Flask](./NGINX)
 - [App that uses QRadar OAuth to authenticate the app](./OAuth)
+- [App that uses a PostgreSQL database](./PostgreSQL)
 - [App that retrieves proxy values](./Proxy)
 - [QJSLib imported through the browser](./QJSLibBrowser)
 - [QJSLib imported through NPM](./QJSLibNPM)

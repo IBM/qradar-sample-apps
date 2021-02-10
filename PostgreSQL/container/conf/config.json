@@ -1,0 +1,7 @@
+{
+  "DEBUG": false,
+  "DB_NAME": "mystore",
+  "DB_PORT": 5432,
+  "DB_USER": "appuser",
+  "DB_HOST": "localhost"
+}
