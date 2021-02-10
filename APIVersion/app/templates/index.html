@@ -1,0 +1,60 @@
+<!--
+Copyright 2021 IBM Corporation
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>API versions</title>
+  </head>
+  <body>
+    <h1>API versions</h1>
+    <div>
+      <h2>Latest API version:</h2>
+      <span>{{ latest }}</span>
+    </div>
+    <div>
+      <h2>API versions</h2>
+      <table>
+        <tr>
+          <th>Version</th>
+          <th>Deprecated</th>
+          <th>Removed</th>
+        </tr>
+        {% for version in versions %}
+          <tr>
+            <td>{{ version.version }}</td>
+            <td>{{ version.deprecated }}</td>
+            <td>{{ version.removed }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+    <div>
+      <h2>Features</h2>
+      <table>
+        <tr>
+          <th>Feature</th>
+          <th>Enabled</th>
+        </tr>
+        {% for feature in features %}
+          <tr>
+            <td>{{ feature.name }}</td>
+            <td>{{ feature.enabled }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </body>
+</html>

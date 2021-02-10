@@ -1,0 +1,16 @@
+{
+  "name": "API version sample",
+  "description": "App showing how to retrieve the QRadar API version",
+  "version": "1.0",
+  "uuid": "2b09a372-22d2-42d5-a692-025e6ad86330",
+  "image": "qradar-app-base:2.0.4",
+  "areas": [
+    {
+      "id": "QVersion",
+      "text": "API version",
+      "description": "API version area",
+      "url": "index",
+      "required_capabilities": []
+    }
+  ]
+}
