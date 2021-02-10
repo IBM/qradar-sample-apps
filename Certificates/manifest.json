@@ -1,0 +1,16 @@
+{
+  "name": "Custom certificates sample",
+  "description": "App showing how to load in custom certificates",
+  "version": "1.0",
+  "uuid": "e7b57727-75e0-42f0-9e28-c4100a8e456c",
+  "image": "qradar-app-base:2.0.4",
+  "areas": [
+    {
+      "id": "QCerts",
+      "text": "Certificates",
+      "description": "Certificate upload area",
+      "url": "index",
+      "required_capabilities": []
+    }
+  ]
+}

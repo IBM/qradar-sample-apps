@@ -21,6 +21,7 @@ required Python modules.
 - [Determining available QRadar API versions and features](./APIVersion)
 - [Using the QPyLib Ariel features](./Ariel)
 - [Running a command as root during app startup](./AsRoot)
+- [App allowing user uploaded custom certificate](./Certificates)
 - [Controlling browser cache](./CacheControl)
 - [App that provides a dashboard item with an image](./DashboardWithImage)
 - [Using QPyLib to encrypt values](./Encryption)
