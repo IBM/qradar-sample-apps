@@ -16,6 +16,7 @@ lint:
 	find . -name "*app"                        \
 		-not -path "./NGINX/*"                 \
 		-not -path "./AlternativeHTTPServer/*" \
+		-not -path "./NodeJS/*"                \
 		| xargs pylint || exit 1
 
 beautify:

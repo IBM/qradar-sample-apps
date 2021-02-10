@@ -32,6 +32,7 @@ required Python modules.
 - [Designating how much memory an app needs](./Memory)
 - [App that supports multi-tenancy](./Multitenancy)
 - [App that uses NGINX rather than Flask](./NGINX)
+- [App that uses NodeJS rather than Flask](./NodeJS)
 - [App that uses QRadar OAuth to authenticate the app](./OAuth)
 - [App that retrieves proxy values](./Proxy)
 - [QJSLib imported through the browser](./QJSLibBrowser)
