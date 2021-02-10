@@ -1,4 +1,4 @@
-# com.ibm.si.sqlite.store
+# SQLite
 
 This sample app demonstrates how to use a SQLite database with a QRadar app. SQLite is included by default inside
 QRadar's Red Hat Universal Base Image, so it does not need to be installed as an additional dependency.
