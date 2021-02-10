@@ -1,4 +1,4 @@
-# com.ibm.si.postgres.store
+# PostgreSQL
 
 This sample app demonstrates how to use a PostgreSQL database with a QRadar app. PostgreSQL is not bundled with
 QRadar's Universal Base Image, so must be installed at build time.
@@ -142,7 +142,8 @@ pip download                     \
     --platform manylinux1_x86_64 \
     --dest container/pip         \
     --no-deps                    \
-    Flask-WTF==0.14.3 WTForms==2.3.3 psycopg2_binary==2.8.4
+    --python-version=36          \
+    Flask-WTF==0.14.3 WTForms==2.3.3 psycopg2-binary==2.8.4
 ```
 
 ## Running this app
