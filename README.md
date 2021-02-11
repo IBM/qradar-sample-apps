@@ -27,6 +27,8 @@ apps locally and to deploy to a QRadar system.
 - [Running a command as root during app startup](./AsRoot)
 - [App allowing user uploaded custom certificate](./Certificates)
 - [App that adds an extra column to the assets table on the assets page](./CustomColumnsAssets)
+- [App that adds an extra column globalized to the offenses table on the offenses
+page](./CustomColumnsOffensesGlobalized)
 - [Controlling browser cache](./CacheControl)
 - [App that provides a dashboard item with an image](./DashboardWithImage)
 - [Using QPyLib to encrypt values](./Encryption)
