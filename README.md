@@ -5,8 +5,10 @@ based on the Red Hat Universal Base Image, not the old CentOS 6 app image.
 
 ## Using these samples
 
-To use the samples it is recommended you have the QRadar App SDK v2 installed, which allows you to bundle apps through
-its command line interface and deploy them to QRadar, or even run the apps locally.
+To use the samples it is recommended you have the -
+[QRadar App SDK v2](https://exchange.xforce.ibmcloud.com/hub/extension/517ff786d70b6dfa39dde485af6cbc8b) installed,
+which allows you to bundle apps through its command line interface and deploy them to QRadar, or even run the apps
+locally.
 
 Some apps require dependencies to be pulled down (if so it is explained in the apps' README), to pull down the required
 dependencies make sure you have the following installed:
@@ -14,6 +16,8 @@ dependencies make sure you have the following installed:
 - [Python 3](https://www.python.org/downloads/) and [pip](https://pip.pypa.io/en/stable/installing/) - To download
 required Python modules.
 - [Docker](https://docs.docker.com/get-docker/) - To download required Red Hat RPMs.
+- [QRadar App SDK v2](https://exchange.xforce.ibmcloud.com/hub/extension/517ff786d70b6dfa39dde485af6cbc8b) - To run
+apps locally and to deploy to a QRadar system.
 
 ## Samples
 
@@ -22,6 +26,7 @@ required Python modules.
 - [Using the QPyLib Ariel features](./Ariel)
 - [Running a command as root during app startup](./AsRoot)
 - [App allowing user uploaded custom certificate](./Certificates)
+- [App that adds an extra column to the assets table on the assets page](./CustomColumnsAssets)
 - [Controlling browser cache](./CacheControl)
 - [App that provides a dashboard item with an image](./DashboardWithImage)
 - [Using QPyLib to encrypt values](./Encryption)
