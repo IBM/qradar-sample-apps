@@ -1,0 +1,32 @@
+{
+  "name": "Custom Column Offenses Tab",
+  "description": "Adds a globalized custom column to the Offenses page",
+  "uuid": "330478-88db-43a5-9b26-6c7ae403c040",
+  "version": "1.0.0",
+  "image": "qradar-app-base:2.0.0",
+  "custom_columns": [
+    {
+      "label": "customcolumn.label",
+      "rest_endpoint": "get_custom_column",
+      "page_id": "OffenseList"
+    }
+  ],
+  "resource_bundles": [
+    {
+      "locale": "en_US",
+      "bundle": "resources/en_US.properties"
+    },
+    {
+      "locale": "es",
+      "bundle": "resources/es.properties"
+    },
+    {
+      "locale": "fr",
+      "bundle": "resources/fr.properties"
+    },
+    {
+      "locale": "en",
+      "bundle": "resources/en.properties"
+    }
+  ]
+}
