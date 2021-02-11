@@ -1,0 +1,14 @@
+{
+  "name": "Custom Columns Asset Tab",
+  "description": "Adds a custom column to the Assets page",
+  "uuid": "abe0b45c-d113-4aa4-8994-69e882b2c138",
+  "version": "1.0.0",
+  "image": "qradar-app-base:2.0.0",
+  "custom_columns": [
+    {
+      "label": "Asset Type",
+      "rest_endpoint": "get_custom_column",
+      "page_id": "AssetList"
+    }
+  ]
+}
