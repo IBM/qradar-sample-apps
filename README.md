@@ -5,7 +5,7 @@ based on the Red Hat Universal Base Image, not the old CentOS 6 app image.
 
 ## Using these samples
 
-To use the samples it is recommended you have the -
+To use the samples it is recommended you have the
 [QRadar App SDK v2](https://exchange.xforce.ibmcloud.com/hub/extension/517ff786d70b6dfa39dde485af6cbc8b) installed,
 which allows you to bundle apps through its command line interface and deploy them to QRadar, or even run the apps
 locally.
