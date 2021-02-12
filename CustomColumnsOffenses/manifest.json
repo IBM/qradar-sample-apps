@@ -1,0 +1,23 @@
+{
+  "name": "Custom column offenses list table",
+  "description": "Render custom column offense using custom javascript",
+  "version": "1.0",
+  "uuid": "7191b673-3225-4d5d-97ba-a41d72cc65f0",
+  "image": "qradar-app-base:2.0.0",
+  "custom_columns": [
+    {
+      "label": "custom col custom javascript",
+      "rest_endpoint": "custom_column_method",
+      "page_id": "OffenseList"
+    }
+  ],
+  "page_scripts": [
+    {
+      "app_name": "SEM",
+      "page_id": "OffenseList",
+      "scripts": [
+        "static/js/custom_offense.js"
+      ]
+    }
+  ]
+}
