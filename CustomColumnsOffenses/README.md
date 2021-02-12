@@ -1,4 +1,4 @@
-# CustomColumnOffenses
+# CustomColumnsOffenses
 
 This sample app demonstrates an app that adds a custom column to the offenses page of QRadar. This extra column is
 labelled as 'custom col custom javascript' and queries the app's Flask backend to populate the column. This app also
