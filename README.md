@@ -39,6 +39,8 @@ content](./CustomColumnsOffenses)
 - [Simple 'hello world' app](./HelloWorld)
 - [Globalized 'hello world' app](./HelloWorldGlobalized)
 - [Designate how much memory an app needs](./Memory)
+- [Use multiple UI components (Areas, Dashboards, Config Pages, GUI Actions, Page Scripts, Metadata Providers) in a
+single app](./MultiComponents)
 - [Support multi-tenancy](./Multitenancy)
 - [Use NGINX rather than Flask](./NGINX)
 - [Use NodeJS rather than Flask](./NodeJS)

@@ -1,0 +1,128 @@
+{
+  "name": "MultiComponent App",
+  "description": "An example of creating many GUI components from one app.",
+  "version": "1.0",
+  "uuid": "619b9be1-7cdb-411c-8a63-68c21403721a",
+  "image": "qradar-app-base:2.0.0",
+  "areas": [
+    {
+      "id": "QMultiComponentApp",
+      "text": "MultiComponent App",
+      "description": "An example of creating many GUI components from one app.",
+      "url": "index",
+      "required_capabilities": []
+    }
+  ],
+  "dashboard_items": [
+    {
+      "text": "MultiComponentApp Item",
+      "description": "Another Sample dashboard item that is going to show some HTML",
+      "rest_method": "sampleDashboardItem",
+      "required_capabilities": []
+    }
+  ],
+  "rest_methods": [
+    {
+      "name": "sampleDashboardItem",
+      "url": "/sampleDashboardItem",
+      "method": "GET",
+      "argument_names": [],
+      "required_capabilities": []
+    },
+    {
+      "name": "sampleToolbarMethod",
+      "url": "/sampleToolbarButton",
+      "method": "GET",
+      "argument_names": [
+        "context"
+      ],
+      "required_capabilities": []
+    },
+    {
+      "name": "sampleIPInformation",
+      "url": "/sampleIpInformation",
+      "method": "GET",
+      "argument_names": [
+        "metaDataContext"
+      ],
+      "required_capabilities": []
+    },
+    {
+      "name": "sampleUserInformation",
+      "url": "/sampleUserInformation",
+      "method": "GET",
+      "argument_names": [
+        "metaDataContext"
+      ],
+      "required_capabilities": []
+    },
+    {
+      "name": "sampleURLInformation",
+      "url": "/sampleURLInformation",
+      "method": "GET",
+      "argument_names": [
+        "metaDataContext"
+      ],
+      "required_capabilities": []
+    }
+  ],
+  "configuration_pages": [
+    {
+      "text": "Open IBM.com",
+      "description": "Loading IBM.com in a new window",
+      "icon": null,
+      "url": "admin_screen",
+      "required_capabilities": [
+        "ADMIN"
+      ]
+    }
+  ],
+  "gui_actions": [
+    {
+      "id": "sampleRightClick",
+      "text": "Sample Right Click",
+      "description": "Sample IP right click action that searches Google.",
+      "icon": null,
+      "javascript": "window.open('http://www.google.com?q='+context.innerText)",
+      "groups": [
+        "ipPopup"
+      ],
+      "required_capabilities": []
+    },
+    {
+      "id": "sampleToolbarButton",
+      "text": "Sample Toolbar Button",
+      "description": "Sample toolbar button that calls a REST method, passing an offense ID along",
+      "icon": null,
+      "rest_method": "sampleToolbarMethod",
+      "javascript": "alert('hello new button!')",
+      "groups": [
+        "OffenseListToolbar"
+      ],
+      "required_capabilities": []
+    }
+  ],
+  "page_scripts": [
+    {
+      "app_name": "SEM",
+      "page_id": "OffenseList",
+      "scripts": [
+        "static/js/sampleScriptInclude.js"
+      ]
+    }
+  ],
+  "metadata_providers": [
+    {
+      "rest_method": "sampleIPInformation",
+      "metadata_type": "ip"
+    },
+    {
+      "rest_method": "sampleUserInformation",
+      "metadata_type": "userName"
+    },
+    {
+      "rest_method": "sampleURLInformation",
+      "metadata_type": "ariel:URL"
+    }
+  ]
+}
