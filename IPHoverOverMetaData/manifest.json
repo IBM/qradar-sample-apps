@@ -1,0 +1,23 @@
+{
+  "name": "Metadata Provider",
+  "description": "Application which demonstrates adding a metadata html element in the popup displayed while hovering over ip entries in tabs",
+  "version": "1.0.0",
+  "uuid": "657b5eb3-b4c8-4287-ad2f-ab483096a7e0",
+  "image": "qradar-app-base:2.0.0",
+  "rest_methods": [
+    {
+      "name": "getIPMetadata",
+      "url": "/ip_metadata_provider",
+      "method": "GET",
+      "argument_names": [
+        "context"
+      ]
+    }
+  ],
+  "metadata_providers": [
+    {
+      "rest_method": "getIPMetadata",
+      "metadata_type": "ip"
+    }
+  ]
+}

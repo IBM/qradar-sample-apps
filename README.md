@@ -38,6 +38,7 @@ content](./CustomColumnsOffenses)
 - [Replace Flask with Gunicorn](./Gunicorn)
 - [Simple 'hello world' app](./HelloWorld)
 - [Globalized 'hello world' app](./HelloWorldGlobalized)
+- [Add hover over information to IP address data](./IPHoverOverMetaData)
 - [Designate how much memory an app needs](./Memory)
 - [Use multiple UI components (Areas, Dashboards, Config Pages, GUI Actions, Page Scripts, Metadata Providers) in a
 single app](./MultiComponents)
