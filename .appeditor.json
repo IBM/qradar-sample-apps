@@ -1,6 +1,18 @@
 {
   "apps": [
     {
+      "path": "./APIVersion",
+      "has_dependencies": false
+    },
+    {
+      "path": "./AsRoot",
+      "has_dependencies": false
+    },
+    {
+      "path": "./CacheControl",
+      "has_dependencies": false
+    },
+    {
       "path": "./CustomColumnsAssets",
       "has_dependencies": false
     }
