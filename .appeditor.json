@@ -1,0 +1,8 @@
+{
+    "apps": [
+        {
+            "path": "./CustomColumnsAssets",
+            "has_dependencies": false
+        }
+    ]
+}
