@@ -1,8 +1,16 @@
 {
   "apps": [
     {
+      "path": "./AlternativeHTTPServer",
+      "has_dependencies": true
+    },
+    {
       "path": "./APIVersion",
       "has_dependencies": false
+    },
+    {
+      "path": "./Ariel",
+      "has_dependencies": true
     },
     {
       "path": "./AsRoot",
@@ -13,8 +21,104 @@
       "has_dependencies": false
     },
     {
+      "path": "./Certificates",
+      "has_dependencies": true
+    },
+    {
       "path": "./CustomColumnsAssets",
       "has_dependencies": false
+    },
+    {
+      "path": "./CustomColumnsOffenses",
+      "has_dependencies": false
+    },
+    {
+      "path": "./CustomColumnsOffensesGlobalized",
+      "has_dependencies": false
+    },
+    {
+      "path": "./DashboardWithImage",
+      "has_dependencies": false
+    },
+    {
+      "path": "./Encryption",
+      "has_dependencies": false
+    },
+    {
+      "path": "./EnvironmentVariables",
+      "has_dependencies": false
+    },
+    {
+      "path": "./GUIActions",
+      "has_dependencies": false
+    },
+    {
+      "path": "./Gunicorn",
+      "has_dependencies": true
+    },
+    {
+      "path": "./HelloWorld",
+      "has_dependencies": false
+    },
+    {
+      "path": "./HelloWorldGlobalized",
+      "has_dependencies": true
+    },
+    {
+      "path": "./IPHoverOverMetaData",
+      "has_dependencies": false
+    },
+    {
+      "path": "./Memory",
+      "has_dependencies": false
+    },
+    {
+      "path": "./MultiComponents",
+      "has_dependencies": false
+    },
+    {
+      "path": "./Multitenancy",
+      "has_dependencies": false
+    },
+    {
+      "path": "./NGINX",
+      "has_dependencies": true
+    },
+    {
+      "path": "./NodeJS",
+      "has_dependencies": true
+    },
+    {
+      "path": "./OAuth",
+      "has_dependencies": false
+    },
+    {
+      "path": "./PostreSQL",
+      "has_dependencies": true
+    },
+    {
+      "path": "./Proxy",
+      "has_dependencies": false
+    },
+    {
+      "path": "./QJSLibBrowser",
+      "has_dependencies": true
+    },
+    {
+      "path": "./QJSLibNPM",
+      "has_dependencies": true
+    },
+    {
+      "path": "./QuickScan",
+      "has_dependencies": true
+    },
+    {
+      "path": "./RESTMethod",
+      "has_dependencies": false
+    },
+    {
+      "path": "./SQLite",
+      "has_dependencies": true
     }
   ]
 }
