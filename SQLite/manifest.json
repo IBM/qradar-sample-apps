@@ -1,5 +1,5 @@
 {
-  "name": "Sqlite Storage App",
+  "name": "SQLite",
   "description": "Save and read data from an sqlite database using an html form",
   "version": "1.0.0",
   "uuid": "e3260a5b-8c47-4c07-8a5a-8fcc535f60dd",

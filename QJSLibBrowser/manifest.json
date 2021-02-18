@@ -1,5 +1,5 @@
 {
-  "name": "QJSLib as a browser import",
+  "name": "QJSLib in Browser",
   "description": "App showing how to use QJSLib imported in the browser",
   "version": "1.0.0",
   "uuid": "9ad7c764-28c0-491d-9d5a-b2bfec346a11",

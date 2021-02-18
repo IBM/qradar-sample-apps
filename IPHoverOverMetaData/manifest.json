@@ -1,5 +1,5 @@
 {
-  "name": "Metadata Provider",
+  "name": "IP Metadata Provider",
   "description": "Application which demonstrates adding a metadata html element in the popup displayed while hovering over ip entries in tabs",
   "version": "1.0.0",
   "uuid": "657b5eb3-b4c8-4287-ad2f-ab483096a7e0",

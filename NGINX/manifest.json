@@ -1,5 +1,5 @@
 {
-  "name": "NGINX App",
+  "name": "NGINX",
   "description": "App using supervisor configuration to replace Flask with NGINX",
   "version": "1.0.0",
   "uuid": "5ecb889a-ee4b-4df1-b756-426338ed8daf",

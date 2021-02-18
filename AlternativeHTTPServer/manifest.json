@@ -1,5 +1,5 @@
 {
-  "name": "Alternative HTTP Service Demo",
+  "name": "Alternative HTTP Service",
   "description": "An application demonstrating using a simple named service rather than Flask to serve its content.",
   "version": "1.0",
   "uuid": "4a90eb04-cb6e-11ea-87d0-0242ac130003",
