@@ -1,5 +1,5 @@
 {
-  "name": "Proxy Sample",
+  "name": "Proxy",
   "description": "How to retrieve and use QRadar proxy values from environment variables",
   "version": "1.0",
   "uuid": "9bea3585-8519-4b2e-9469-6e7e993c587b",

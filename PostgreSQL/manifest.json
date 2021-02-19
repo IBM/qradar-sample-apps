@@ -1,5 +1,5 @@
 {
-  "name": "Postgres Storage App",
+  "name": "PostgreSQL",
   "description": "Save and read data from a postgres database using an html form including clean up example stopping db during app shutdown",
   "version": "1.0.0",
   "uuid": "60f9f209-f6aa-4d87-b869-c102dcf3752c",

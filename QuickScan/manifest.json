@@ -1,5 +1,5 @@
 {
-  "name": "QuickScan",
+  "name": "QVM QuickScan",
   "description": "An application tab that allows the user to submit QVM scans.",
   "version": "1.0",
   "image": "qradar-app-base:2.0.0",

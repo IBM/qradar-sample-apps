@@ -1,0 +1,154 @@
+{
+  "apps": [
+    {
+      "path": "./AlternativeHTTPServer",
+      "has_dependencies": true,
+      "requires_oauth": false
+    },
+    {
+      "path": "./APIVersion",
+      "has_dependencies": false,
+      "requires_oauth": false
+    },
+    {
+      "path": "./Ariel",
+      "has_dependencies": true,
+      "requires_oauth": false
+    },
+    {
+      "path": "./AsRoot",
+      "has_dependencies": false,
+      "requires_oauth": false
+    },
+    {
+      "path": "./CacheControl",
+      "has_dependencies": false,
+      "requires_oauth": false
+    },
+    {
+      "path": "./Certificates",
+      "has_dependencies": true,
+      "requires_oauth": false
+    },
+    {
+      "path": "./CustomColumnsAssets",
+      "has_dependencies": false,
+      "requires_oauth": false
+    },
+    {
+      "path": "./CustomColumnsOffenses",
+      "has_dependencies": false,
+      "requires_oauth": false
+    },
+    {
+      "path": "./CustomColumnsOffensesGlobalized",
+      "has_dependencies": false,
+      "requires_oauth": false
+    },
+    {
+      "path": "./DashboardWithImage",
+      "has_dependencies": false,
+      "requires_oauth": false
+    },
+    {
+      "path": "./Encryption",
+      "has_dependencies": false,
+      "requires_oauth": false
+    },
+    {
+      "path": "./EnvironmentVariables",
+      "has_dependencies": false,
+      "requires_oauth": false
+    },
+    {
+      "path": "./GUIActions",
+      "has_dependencies": false,
+      "requires_oauth": false
+    },
+    {
+      "path": "./Gunicorn",
+      "has_dependencies": true,
+      "requires_oauth": false
+    },
+    {
+      "path": "./HelloWorld",
+      "has_dependencies": false,
+      "requires_oauth": false
+    },
+    {
+      "path": "./HelloWorldGlobalized",
+      "has_dependencies": true,
+      "requires_oauth": false
+    },
+    {
+      "path": "./IPHoverOverMetaData",
+      "has_dependencies": false,
+      "requires_oauth": false
+    },
+    {
+      "path": "./Memory",
+      "has_dependencies": false,
+      "requires_oauth": false
+    },
+    {
+      "path": "./MultiComponents",
+      "has_dependencies": false,
+      "requires_oauth": false
+    },
+    {
+      "path": "./Multitenancy",
+      "has_dependencies": false,
+      "requires_oauth": false
+    },
+    {
+      "path": "./NGINX",
+      "has_dependencies": true,
+      "requires_oauth": false
+    },
+    {
+      "path": "./NodeJS",
+      "has_dependencies": true,
+      "requires_oauth": false
+    },
+    {
+      "path": "./OAuth",
+      "has_dependencies": false,
+      "requires_oauth": true
+    },
+    {
+      "path": "./PostreSQL",
+      "has_dependencies": true,
+      "requires_oauth": false
+    },
+    {
+      "path": "./Proxy",
+      "has_dependencies": false,
+      "requires_oauth": false
+    },
+    {
+      "path": "./QJSLibBrowser",
+      "has_dependencies": true,
+      "requires_oauth": false
+    },
+    {
+      "path": "./QJSLibNPM",
+      "has_dependencies": true,
+      "requires_oauth": false
+    },
+    {
+      "path": "./QuickScan",
+      "has_dependencies": true,
+      "requires_oauth": false
+    },
+    {
+      "path": "./RESTMethod",
+      "has_dependencies": false,
+      "requires_oauth": false
+    },
+    {
+      "path": "./SQLite",
+      "has_dependencies": true,
+      "requires_oauth": false
+    }
+  ]
+}
