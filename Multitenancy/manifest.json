@@ -1,6 +1,6 @@
 {
   "name": "Multitenancy",
-  "description": "App showing multitenancy capabilities, with each tenant having a dedicated app instance",
+  "description": "App showing multitenancy capabilities with each tenant having a dedicated app instance",
   "version": "1.0",
   "uuid": "31d716a3-e374-4adc-96db-2fae472f6ea2",
   "image": "qradar-app-base:2.0.0",
