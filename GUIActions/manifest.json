@@ -1,6 +1,6 @@
 {
   "name": "GUI Actions",
-  "description": "Sample using GUI actions with log and network activities, offenses, assets, and vulnerabilies pages",
+  "description": "Sample using multiple GUI actions",
   "version": "1.0.0",
   "uuid": "8c58b50e-bf8d-11ea-b3de-0242ac130004",
   "image": "qradar-app-base:2.0.0",
