@@ -19,13 +19,12 @@ from flask import Blueprint, render_template
 viewsbp = Blueprint('viewsbp', __name__, url_prefix='/')
 
 
-# Simple endpoint that renders and serves 'users.html', displaying all UNIX
-# users on the system
+# Simple endpoint that displays the contents of sudoers
 @viewsbp.route('/index')
-def users():
-    # Get all UNIX users and store their names in a list
-    user_list = []
-    for user in pwd.getpwall():
-        user_list.append(user[0])
-    # Render users.html using the retrieved user list
-    return render_template('users.html', users=user_list)
+def index():
+    with open('/opt/app-root/store/sudoers', 'r') as file:
+        text_formatted = " "
+        for line in file:
+            text_formatted += line + "</br>"
+    file.close()
+    return text_formatted
