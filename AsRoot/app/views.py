@@ -12,8 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import pwd
-from flask import Blueprint, render_template
+from flask import Blueprint
 
 # pylint: disable=invalid-name
 viewsbp = Blueprint('viewsbp', __name__, url_prefix='/')
