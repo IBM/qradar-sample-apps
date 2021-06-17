@@ -21,7 +21,7 @@ viewsbp = Blueprint('viewsbp', __name__, url_prefix='/')
 # Simple endpoint that displays the contents of sudoers
 @viewsbp.route('/index')
 def index():
-    with open('/opt/app-root/store/sudoers', 'r') as file:
+    with open('/opt/app-root/sudoers', 'r') as file:
         text_formatted = " "
         for line in file:
             text_formatted += line + "</br>"

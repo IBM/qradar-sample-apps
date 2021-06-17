@@ -15,4 +15,5 @@
 # limitations under the License.
 
 # Copy contents of /etc/sudoers into /opt/app-root/store
-as_root cp -f /etc/sudoers /opt/app-root/store
+as_root cp -f /etc/sudoers /opt/app-root
+as_root chown appuser:appuser /opt/app-root/sudoers
