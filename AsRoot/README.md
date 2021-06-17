@@ -2,7 +2,7 @@
 
 This sample app shows how to use the `as_root` feature as part of a QRadar app.
 
-This app copies the contents of /etc/sudoers into /opt/app-root/store and prints the contents under the  asRoot tab from QRadar.
+This app copies the contents of /etc/sudoers into /opt/app-root and prints the contents under the  asRoot tab from QRadar.
 
 ## as_root
 
