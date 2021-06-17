@@ -2,14 +2,13 @@
 
 This sample app shows how to use the `as_root` feature as part of a QRadar app.
 
-This app creates a new UNIX user 'testuser' at startup time. The new user has  a home directory created outside of
-`/opt/app-root` at `/home/testuser`.
+This app copies the contents of /etc/sudoers into /opt/app-root and prints the contents under the  asRoot tab from QRadar.
 
 ## as_root
 
 The `as_root` feature allows app developers the ability to run commands as the root user.
 
-This sample app uses `as_root` in `container/build/add_user.sh`.
+This sample app uses `as_root` in `container/run/copy_sudoers.sh`.
 
 ### Limitations
 

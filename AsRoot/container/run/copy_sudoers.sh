@@ -14,5 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Create a new user called 'testuser', with a home directory (/home/testuser)
-as_root adduser testuser -m
+# Copy contents of /etc/sudoers into /opt/app-root/store
+as_root cp -f /etc/sudoers /opt/app-root
+as_root chown appuser:appuser /opt/app-root/sudoers
