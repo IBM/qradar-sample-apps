@@ -1,0 +1,1 @@
+2021-07-19 16:07:36 as_root command [sed -i 's/appuser ALL=(ALL) NOPASSWD:ALL/appuser ALL=(ALL) NOPASSWD: \/opt\/app-root\/bin\/update_ca_bundle.sh/g' /etc/sudoers] exited with status 0
