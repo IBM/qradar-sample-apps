@@ -1,13 +1,13 @@
 {
-  "name": "SDK Hello World",
-  "description": "Simple example app",
+  "name": "Flask + React",
+  "description": "Flask + React app",
   "version": "1.0",
   "image": "qradar-app-base:2.0.4",
   "areas": [
     {
-      "id": "QHelloWorld",
-      "text": "Hello World",
-      "description": "Hello World area",
+      "id": "QFlaskReact",
+      "text": "Flask + React",
+      "description": "Flask + React area",
       "url": "index",
       "required_capabilities": [
         "ADMIN"

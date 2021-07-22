@@ -48,5 +48,7 @@ def create_app():
     qflask.register_blueprint(views.viewsbp)
     from . import dev
     qflask.register_blueprint(dev.devbp)
+    from . import api
+    qflask.register_blueprint(api.apibp)
 
     return qflask

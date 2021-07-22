@@ -1,4 +1,5 @@
 #!/bin/bash
+start=`date +%s`
 
 printf "\nCleaning up existing containers/images...\n\n"
 qapp clean -i
@@ -10,4 +11,7 @@ cd ..
 printf "\nStarting container...\n\n"
 qapp run -d
 
-printf "\nDone!\n"
+end=`date +%s`
+runtime=$((end-start))
+
+printf "\nDone in $runtime seconds!\n"
