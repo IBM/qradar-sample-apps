@@ -1,13 +1,13 @@
 {
-  "name": "Flask + React",
-  "description": "Flask + React app",
+  "name": "Carbon Components",
+  "description": "Carbon Components sample app",
   "version": "1.0",
   "image": "qradar-app-base:2.0.4",
   "areas": [
     {
       "id": "QFlaskReact",
-      "text": "Flask + React",
-      "description": "Flask + React area",
+      "text": "Carbon Components",
+      "description": "Carbon Components area",
       "url": "index",
       "required_capabilities": [
         "ADMIN"

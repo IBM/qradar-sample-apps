@@ -26,6 +26,7 @@
     "carbon-components-react": "^7.39.0",
     "case-sensitive-paths-webpack-plugin": "2.3.0",
     "css-loader": "4.3.0",
+    "date-fns": "^2.23.0",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
     "eslint": "^7.11.0",

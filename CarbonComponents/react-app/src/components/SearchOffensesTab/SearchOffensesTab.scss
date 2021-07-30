@@ -1,0 +1,23 @@
+@import '../../scss/globals';
+
+.offenses-searchbar {
+    display: flex;
+    margin-bottom: $spacing-12;
+    max-width: carbon--mini-units($count: 96);
+
+    .offenses-searchbar-inner {
+        display: flex;
+        position: relative;
+        width: 100%;
+
+        .searchbar-invalid {
+            border: 2px solid $red-50;
+        }
+    
+        .searchbar-invalid-msg {
+            color: $red-50;
+            position: absolute;
+            margin-top: $spacing-10;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@import '../../scss/globals';
+
+.offenses-tab-container {
+    width: 80%;
+}
+
+.offenses-empty-state {
+    margin-bottom: $spacing-08;
+
+    .empty-state-text {
+        margin-bottom: $spacing-09;
+        p {
+            margin: 0px;
+        }
+    }
+}
+
+.offenses-text-button-pair {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
