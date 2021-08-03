@@ -1,7 +1,7 @@
 {
   "name": "react-app",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "./static/react",
   "dependencies": {
     "@babel/core": "7.12.3",
