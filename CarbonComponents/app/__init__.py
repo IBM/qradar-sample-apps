@@ -17,6 +17,7 @@ __author__ = 'IBM'
 from flask import Flask
 from qpylib import qpylib
 
+
 # Flask application factory.
 def create_app():
     # Create a Flask instance.
@@ -54,9 +55,5 @@ def create_app():
     #   https://flask.palletsprojects.com/en/1.1.x/tutorial/views
     from . import views
     qflask.register_blueprint(views.viewsbp)
-    from . import dev
-    qflask.register_blueprint(dev.devbp)
-    from . import api
-    qflask.register_blueprint(api.apibp)
 
     return qflask

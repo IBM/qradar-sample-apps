@@ -12,12 +12,30 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request
+from qpylib import qpylib
 
 # pylint: disable=invalid-name
 viewsbp = Blueprint('viewsbp', __name__, url_prefix='/')
+
 
 @viewsbp.route('/')
 @viewsbp.route('/index')
 def index():
     return render_template('index.html')
+
+
+@viewsbp.route('offenses')
+def get_offenses():
+    offense_range = request.args.get('range')
+    response = qpylib.REST('get',
+                           '/api/siem/offenses',
+                           None,
+                           headers={'Range': offense_range})
+    return {'offenses': response.json()}
+
+
+@viewsbp.route('offenses/<id>')
+def get_offense_by_id(offense_id):
+    response = qpylib.REST('get', ('/api/siem/offenses/' + offense_id))
+    return {'offense': response.json()}

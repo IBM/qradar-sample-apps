@@ -16,7 +16,7 @@
 start=`date +%s`
 
 printf "\nBuilding React application...\n\n"
-cd react-app && yarn build
+cd react-ui && yarn build
 cd ..
 
 printf "\nChecking if package app.zip already exists...\n"

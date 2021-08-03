@@ -45,14 +45,14 @@ Copy the localhost link output to the terminal and open it in a browser. You sho
 We'll be using [Create React App](https://create-react-app.dev/) to generate the React application that will serve as the front end of this app. Still in the root directory, run the following command:
 
 ```bash
-npx create-react-app react-app
+npx create-react-app react-ui
 ```
 
 _Note: `npx` is not a typo, it's a package runner tool that comes with npm 5.2+._
 
-It will take a minute or two to generate the React app and install all the necessary dependencies, When it's finished all the application code can be found in a new `react-app` directory.
+It will take a minute or two to generate the React app and install all the necessary dependencies, When it's finished all the application code can be found in a new `react-ui` directory.
 
-To launch the application locally, navigate into the `react-app` directory and run the following command:
+To launch the application locally, navigate into the `react-ui` directory and run the following command:
 
 ```bash
 yarn start
@@ -73,7 +73,7 @@ There are quite a few different packages that make up Carbon, and you can add or
 3.  `@carbon/colors` - The predefined colour schemes used by Carbon;
 4.  `@carbon/icons-react` - A set of Carbon icons that can be imported and used as React components;
 
-Install all of these by running the following command in the `react-app` directory:
+Install all of these by running the following command in the `react-ui` directory:
 
 ```bash
 yarn add carbon-components-react @carbon/ibm-security @carbon/colors @carbon/icons-react
@@ -132,7 +132,7 @@ Once this process has finished, you'll notice a new `config` folder in the root 
 
 There are a few updates to make, let's go through them step by step:
 
-1. In `react-app/config/paths.js`, there is a `buildPath` variable that dictates where the production build ends up. The build will need to be somewhere in the `app` directory of the project, so that it gets included in the package that gets deployed to QRadar. Update this variable to the following:
+1. In `react-ui/config/paths.js`, there is a `buildPath` variable that dictates where the production build ends up. The build will need to be somewhere in the `app` directory of the project, so that it gets included in the package that gets deployed to QRadar. Update this variable to the following:
 
 ```js
 const  buildPath = '../app/static/react';
@@ -173,7 +173,7 @@ new  HtmlWebpackPlugin(
 ```
 
 #### Building the React app
-Do a production build of the React application by running the following command in the `react-app` directory:
+Do a production build of the React application by running the following command in the `react-ui` directory:
 ```bash
 yarn build
 ```
@@ -253,7 +253,7 @@ Note that we've imported the Button at the top of the file, and then called it i
 To see these changes, we'll need to do a fresh production build of the React app for the Flask app to serve. Run the commands below:
 
 ```bash
-cd react-app && yarn build
+cd react-ui && yarn build
 cd ..
 qapp clean -i
 qapp run
@@ -287,7 +287,7 @@ So we could just compress the root folder of our application and deploy the whol
 From the root directory of the application, run the commands below to generate a fresh build of the React app and compress only the essential files into an `app.zip` package.
 
 ```bash
-cd react-app && yarn build
+cd react-ui && yarn build
 cd ..
 zip app.zip -r app container manifest.json
 ```
