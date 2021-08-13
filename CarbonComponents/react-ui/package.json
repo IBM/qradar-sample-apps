@@ -5,9 +5,8 @@
   "homepage": "./static/react",
   "dependencies": {
     "@babel/core": "7.12.3",
-    "@carbon/colors": "^10.28.0",
-    "@carbon/ibm-security": "^1.43.0",
-    "@carbon/icons-react": "^10.35.0",
+    "@carbon/colors": "^10.30.0",
+    "@carbon/ibm-security": "^1.44.0",
     "@pmmmwh/react-refresh-webpack-plugin": "0.4.3",
     "@svgr/webpack": "5.5.0",
     "@testing-library/jest-dom": "^5.11.4",
@@ -23,7 +22,7 @@
     "babel-preset-react-app": "^10.0.0",
     "bfj": "^7.0.2",
     "camelcase": "^6.1.0",
-    "carbon-components-react": "^7.39.0",
+    "carbon-components-react": "^7.41.0",
     "case-sensitive-paths-webpack-plugin": "2.3.0",
     "css-loader": "4.3.0",
     "date-fns": "^2.23.0",
@@ -48,7 +47,6 @@
     "jest-resolve": "26.6.0",
     "jest-watch-typeahead": "0.6.1",
     "mini-css-extract-plugin": "0.11.3",
-    "node-sass": "^5.0.0",
     "optimize-css-assets-webpack-plugin": "5.0.4",
     "pnp-webpack-plugin": "1.6.4",
     "postcss-flexbugs-fixes": "4.2.1",
@@ -59,11 +57,12 @@
     "prompts": "2.4.0",
     "react": "^17.0.2",
     "react-app-polyfill": "^2.0.0",
-    "react-dev-utils": "^11.0.3",
+    "react-dev-utils": "11.0.4",
     "react-dom": "^17.0.2",
     "react-refresh": "^0.8.3",
     "resolve": "1.18.1",
     "resolve-url-loader": "^3.1.2",
+    "sass": "^1.37.5",
     "sass-loader": "^10.0.5",
     "semver": "7.3.2",
     "style-loader": "1.3.0",
@@ -98,58 +97,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "jest": {
-    "roots": [
-      "<rootDir>/src"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!src/**/*.d.ts"
-    ],
-    "setupFiles": [
-      "react-app-polyfill/jsdom"
-    ],
-    "setupFilesAfterEnv": [
-      "<rootDir>/src/setupTests.js"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
-      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
-    ],
-    "testEnvironment": "jsdom",
-    "testRunner": "/Users/erinhughes/Documents/scss-test/react-app/node_modules/jest-circus/runner.js",
-    "transform": {
-      "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "<rootDir>/config/jest/babelTransform.js",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
-      "^.+\\.module\\.(css|sass|scss)$"
-    ],
-    "modulePaths": [],
-    "moduleNameMapper": {
-      "^react-native$": "react-native-web",
-      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
-    },
-    "moduleFileExtensions": [
-      "web.js",
-      "js",
-      "web.ts",
-      "ts",
-      "web.tsx",
-      "tsx",
-      "json",
-      "web.jsx",
-      "jsx",
-      "node"
-    ],
-    "watchPlugins": [
-      "jest-watch-typeahead/filename",
-      "jest-watch-typeahead/testname"
-    ],
-    "resetMocks": true
   },
   "babel": {
     "presets": [

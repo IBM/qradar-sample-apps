@@ -35,7 +35,7 @@ def get_offenses():
     return {'offenses': response.json()}
 
 
-@viewsbp.route('offenses/<id>')
+@viewsbp.route('offenses/<offense_id>')
 def get_offense_by_id(offense_id):
     response = qpylib.REST('get', ('/api/siem/offenses/' + offense_id))
     return {'offense': response.json()}
