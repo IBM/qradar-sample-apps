@@ -70,25 +70,18 @@ There are quite a few different packages that make up Carbon, and you can add or
 
 1.  `carbon-components-react` - A collection of Carbon components built in React;
 2.  `@carbon/ibm-security` - An extension of Carbon that includes more components commonly used by offerings in the IBM Security organisation;
-3.  `@carbon/colors` - The predefined colour schemes used by Carbon;
-4.  `@carbon/icons-react` - A set of Carbon icons that can be imported and used as React components;
+3.  `@carbon/colors` - The predefined colour schemes used by Carbon.
 
 Install all of these by running the following command in the `react-ui` directory:
 
 ```bash
-yarn add carbon-components-react @carbon/ibm-security @carbon/colors @carbon/icons-react
+yarn add carbon-components-react @carbon/ibm-security @carbon/colors
 ```
 
-All of the Carbon components are styled using SCSS, so we'll also need to bring in the `node-sass` package to support that:
+All of the Carbon components are styled using SCSS, so we'll also need to bring in [Dart Sass](https://sass-lang.com/dart-sass):
 
 ```bash
-yarn add node-sass
-```
-
-Finally, we'll also install `axios`, a promise based HTTP client that will be used in the front-end to make requests for data from the Flask webserver:
-
-```bash
-yarn add axios
+yarn add sass
 ```
 
 ## Step 4: Convert existing CSS files to SCSS
@@ -135,26 +128,26 @@ There are a few updates to make, let's go through them step by step:
 1. In `react-ui/config/paths.js`, there is a `buildPath` variable that dictates where the production build ends up. The build will need to be somewhere in the `app` directory of the project, so that it gets included in the package that gets deployed to QRadar. Update this variable to the following:
 
 ```js
-const  buildPath = '../app/static/react';
+const buildPath = '../app/static/react';
 ```
 
 2. Open `webpack.config.js`, found in the `config` directory. Among other things, this file dictates the names of the minified css and js files that are generated as part of the build process. By default, these names are prefaced with `static/`. We need to update this, otherwise our files will be written to `app/static/react/static`. Do a find and replace for `static/` and remove it from all filepaths, e.g.
 
 ```js
 /* before */
-filename:  isEnvProduction
+filename: isEnvProduction
 	? 'static/js/[name].[contenthash:8].js'
 	: isEnvDevelopment && 'static/js/bundle.js',
 
 /* after */
-filename:  isEnvProduction
+filename: isEnvProduction
 	? 'js/[name].[contenthash:8].js'
 	: isEnvDevelopment && 'js/bundle.js',
 ```
 
 3. Still in `webpack.config.js`, find where the `HtmlWebpackPlugin` object is initialised. Here we're going to add a `filename` field to specify that the compiled `index.html` file should be written to the templates directory of the Flask app:
 ```js
-new  HtmlWebpackPlugin(
+new HtmlWebpackPlugin(
 	Object.assign(
 		{},
 		{
@@ -209,13 +202,13 @@ qapp clean -i
 qapp run
 ```
 
-Navigate to the localhost url that is output in the terminal. If everything is set up correctly, you should see the same React page as before in Step 2, but now it's being served by Flask.
+Navigate to the localhost url that is output in the terminal. If everything is set up correctly, you should see the same React page as before in Step 2, but now it's being served by Flask!
 
 ## Step 6: Bringing in Carbon Components
 
-Now that the hard part is over, we can concentrate on bringing some Carbon components into our app. For the purposes of this tutorial, we're just going to bring in the one component to confirm that everything is imported and working as expected. The full sample application demonstrates how to import and use around 10 different Carbon components; refer to that for some more examples.
+Now that the hard part is over, we can concentrate on bringing some Carbon components into our app. For the purposes of this tutorial, we're just going to bring in one component to confirm that everything is imported and working as expected. The full sample application demonstrates how to import and use around 10 different Carbon components; refer to that for some more examples.
 
-The Carbon component we're going to use is the [Button](https://react.carbondesignsystem.com/?path=/story/components-button--default) component. We'll add the button at the bottom of the page that's currently being served by the Flask app.
+The Carbon component we're going to use is the [Button](https://react.carbondesignsystem.com/?path=/story/components-button--default) component. We'll add the Button at the bottom of the page that's currently being served by the Flask app.
 
 Open `App.js` and update it with the following:
 
