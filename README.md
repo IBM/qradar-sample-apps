@@ -25,6 +25,7 @@ apps locally and to deploy to a QRadar system.
 - [Determine available QRadar API versions and features](./APIVersion)
 - [Use the QPyLib Ariel features](./Ariel)
 - [Run a command as root during app startup](./AsRoot)
+- [Use Carbon components with QRadar App SDK v2](./CarbonComponents)
 - [Allow user uploaded custom certificate](./Certificates)
 - [Add an extra column to the offenses table on the offenses page and uses JS to render
 content](./CustomColumnsOffenses)

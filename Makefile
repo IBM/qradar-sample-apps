@@ -13,16 +13,18 @@
 # limitations under the License.
 
 lint:
-	find . -name "*app"                        \
-		-not -path "./NGINX/*"                 \
-		-not -path "./AlternativeHTTPServer/*" \
-		-not -path "./NodeJS/*"                \
+	find . -name "*app"                             \
+		-not -path "./NGINX/*"                      \
+		-not -path "./AlternativeHTTPServer/*"      \
+		-not -path "./NodeJS/*"                     \
+		-not -path "./CarbonComponents/react-ui/*"  \
 		| xargs pylint || exit 1
 
 beautify:
 	# Python beautify
 	find . -name "*app" | xargs yapf -p -i -r
 	# JSON beautify
-	find . -name "*.json"             \
-		-not -path "*/node_modules/*" \
+	find . -name "*.json"               \
+		-not -path "*/node_modules/*"   \
+		-not -path "*/*/node_modules/*" \
 		| xargs -I@ bash -c "cat @ | jq . > tmp.json && mv tmp.json @"
