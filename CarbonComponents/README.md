@@ -20,7 +20,7 @@ yarn install
 You can then run the following command in this directory to build and start the application:
 
 ```bash
-. store/scripts/clean_and_run.sh
+. store/scripts/clean-and-run.sh
 ```
 
 ### Deploying to QRadar
