@@ -28,19 +28,23 @@ CERTS_DIRECTORY = '/opt/app-root/store/certs'
 @viewsbp.route('/')
 @viewsbp.route('/index')
 def index():
+    cert_app = get_certificate_management_app()
     url = request.args.get('address')
     if url is not None:
         try:
             response = requests.get(url)
-        except SSLError:
+        except SSLError as ssl_error:
             return render_template('index.html',
                                    url=url,
-                                   result='An SSL error occurred!')
+                                   result='An SSL error occurred!', 
+                                   status_code = str(ssl_error),
+                                   cert_app=cert_app)                 
         return render_template('index.html',
-                               url=url,
+                               url=url, 
                                status_code=response.status_code,
-                               result=response.text)
-    return render_template('index.html')
+                               result=response.text, cert_app=cert_app
+                               )
+    return render_template('index.html', cert_app=cert_app)
 
 
 @viewsbp.route('/upload_cert', methods=['POST'])
@@ -58,6 +62,22 @@ def upload_cert():
     refresh_certs()
     return redirect('/', code=303)
 
+def get_certificate_management_app():
+    params = {'filter': 'manifest(name)="QRadar Certificate Management" and application_state(status)="RUNNING"',
+              'fields': 'application_state'}
+    response = qpylib.REST(rest_action='GET',
+                            request_url='/api/gui_app_framework/applications',
+                            params=params)
+    if not response.status_code == 200:
+        qpylib.log('Failed to get Certificate Management App')
+    jsonResult = response.json()
+    address=""
+    if len(jsonResult) > 0:
+        for app_id in jsonResult:
+            cert_management_id = app_id['application_state']['application_id']
+        console_ip = qpylib.get_console_address()
+        address = "https://{0}/console/plugins/{1}/app_proxy/#/browse/uploadRoot".format(console_ip, cert_management_id)
+    return address
 
 def refresh_certs():
     os.system('sudo /opt/app-root/bin/update_ca_bundle.sh')

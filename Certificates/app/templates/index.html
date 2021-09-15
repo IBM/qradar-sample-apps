@@ -32,11 +32,13 @@ limitations under the License.
   </form>
   <form id="http-form" method="GET">
     <h2 id="http-title">Make a HTTP GET request from app backend</h2>
+    <h3 id="upload-test">Test uploaded certificate</h3>
+    <h4>Enter a url that requires a client certificate for authentication</h4>
     <div>
       <label>Address to send a HTTP GET request to</label>
       <input id="http-input" type="url" name="address" placeholder="https://..." />
     </div>
-    <input id="http-submit" type="submit" value="Send request" />
+    <input id="http-submit" type="submit" value="Test" />
   </form>
   {% if url %}
   <div>
@@ -44,6 +46,13 @@ limitations under the License.
     <div>
       <label>Address:</label>
       <span id="result-url">{{ url }}</span>
+    </div>
+    <div>
+      {% if status_code==200 %}
+      <span id="success">Test Successful</span>
+      {% else %} 
+      <span id="unsuccessful">There was a problem with the test</span>
+      {% endif %} 
     </div>
     <div>
       <label>Status:</label>
@@ -55,6 +64,12 @@ limitations under the License.
     </div>
   </div>
   {% endif %}
+  {% if cert_app %}
+  <div>
+    <h2 id="cert-app">Certificate Management App</h2>
+    <a href={{ cert_app }} target="_blank">Upload Root Certificate with Certificate Management App</a>
+  </div>
+  {% endif %} 
 </body>
 
 </html>
