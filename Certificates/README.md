@@ -3,7 +3,8 @@
 This sample app shows how an app can support user certificate upload at runtime.
 
 In this app a user can upload a certificate to trust, and can test the certificate has been added successfully by
-making a HTTP GET request to a provided URL.
+making a HTTP GET request to an external URL. This URL must be one that requires a client certificate for authentication
+and can not be any URL such as the QRadar console as this will not test the certificate.
 
 If a user wants to have the certificate trusted by QRadar as a whole, they can use the Certificate Management App
 which is accessed by a link such as the one in this sample app.
