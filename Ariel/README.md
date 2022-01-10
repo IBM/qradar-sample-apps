@@ -14,7 +14,7 @@ First QJSLib should be downloaded from the GitHub releases page, in this example
 
 ```bash
 curl -LJ https://github.com/IBM/qjslib/releases/download/1.1.1/qjslib-1.1.1.tgz \
-    | tar -xvzO ./package/lib/qappfw.min.js > ./app/static/qjslib/qappfw.min.js
+    | tar -xvzO package/lib/qappfw.min.js > ./app/static/qjslib/qappfw.min.js
 ```
 
 You can package this app and deploy it by executing in this directory:
