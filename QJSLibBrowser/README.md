@@ -14,7 +14,7 @@ First QJSLib should be downloaded from the GitHub releases page, in this example
 
 ```bash
 curl -LJ https://github.com/IBM/qjslib/releases/download/1.1.1/qjslib-1.1.1.tgz \
-    | tar -xvzO ./package/lib/qappfw.min.js > ./app/static/qjslib/qappfw.min.js
+    | tar -xvzO package/lib/qappfw.min.js > ./app/static/qjslib/qappfw.min.js
 ```
 
 In this sample, QJSLib exists in `app/static/qjslib/qappfw.min.js`, and can be imported by adding a reference to it in
