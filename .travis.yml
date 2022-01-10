@@ -19,7 +19,7 @@ python: 3.7.2
 before_install:
   - deactivate
   - python --version
-  - /opt/python/3.7.q/bin/python -m venv ~/venv
+  - /opt/python/3.7.2/bin/python -m venv ~/venv
   - source ~/venv/bin/activate
 
 install:
