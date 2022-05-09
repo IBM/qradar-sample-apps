@@ -1,0 +1,105 @@
+{
+  "name": "Config Page Locations",
+  "description": "Config Page locations app",
+  "version": "1.0.0",
+  "uuid": "eeb69332-817c-4a03-bb2e-823f0742313e",
+  "image": "qradar-app-base:2.0.0",
+  "configuration_pages": [
+    {
+      "text": "System configuration",
+      "description": "System configuration",
+      "icon": "static/images/extensions_manager.png",
+      "url": "index",
+      "location": "system_configuration",
+      "required_capabilities": []
+    },
+    {
+      "text": "User management",
+      "description": "User management",
+      "icon": "static/images/extensions_manager.png",
+      "url": "index",
+      "location": "user_management",
+      "required_capabilities": []
+    },
+    {
+      "text": "Forensics",
+      "description": "Forensics",
+      "icon": "static/images/extensions_manager.png",
+      "url": "index",
+      "location": "forensics",
+      "required_capabilities": []
+    },
+    {
+      "text": "Assets",
+      "description": "Assets",
+      "icon": "static/images/extensions_manager.png",
+      "url": "index",
+      "location": "assets",
+      "required_capabilities": []
+    },
+    {
+      "text": "Data sources events",
+      "description": "Data sources events",
+      "icon": "static/images/extensions_manager.png",
+      "url": "index",
+      "location": "data_sources_events",
+      "required_capabilities": []
+    },
+    {
+      "text": "Data sources flows",
+      "description": "Data sources flows",
+      "icon": "static/images/extensions_manager.png",
+      "url": "index",
+      "location": "data_sources_flows",
+      "required_capabilities": []
+    },
+    {
+      "text": "Data sources custom actions",
+      "description": "Data sources custom actions",
+      "icon": "static/images/extensions_manager.png",
+      "url": "index",
+      "location": "data_sources_custom_actions",
+      "required_capabilities": []
+    },
+    {
+      "text": "Data sources vulnerability",
+      "description": "Data sources vulnerability",
+      "icon": "static/images/extensions_manager.png",
+      "url": "index",
+      "location": "data_sources_vulnerability",
+      "required_capabilities": []
+    },
+    {
+      "text": "Try it out",
+      "description": "Try it out",
+      "icon": "static/images/extensions_manager.png",
+      "url": "index",
+      "location": "try_it_out",
+      "required_capabilities": []
+    },
+    {
+      "text": "Dynamic search",
+      "description": "Dynamic search",
+      "icon": "static/images/extensions_manager.png",
+      "url": "index",
+      "location": "dynamic_search",
+      "required_capabilities": []
+    },
+    {
+      "text": "Remote networks and services configuration",
+      "description": "Remote networks and services configuration",
+      "icon": "static/images/extensions_manager.png",
+      "url": "index",
+      "location": "remote_networks_and_services_configuration",
+      "required_capabilities": []
+    },
+    {
+      "text": "Apps",
+      "description": "Apps",
+      "icon": "static/images/extensions_manager.png",
+      "url": "index",
+      "location": "apps",
+      "required_capabilities": []
+    }
+  ]
+}
