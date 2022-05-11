@@ -1,6 +1,11 @@
 {
   "apps": [
     {
+      "path": "./AppWithoutUserRole",
+      "has_dependencies": false,
+      "requires_oauth": false
+    },
+    {
       "path": "./AlternativeHTTPServer",
       "has_dependencies": true,
       "requires_oauth": false

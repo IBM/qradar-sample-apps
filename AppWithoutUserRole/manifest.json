@@ -1,0 +1,17 @@
+{
+  "name": "App Without User Role",
+  "description": "Set add_app_capability false to not create a user role",
+  "version": "1.0.0",
+  "uuid": "0616bdb3-1c7a-4acf-89a2-4dc726e010bf",
+  "image": "qradar-app-base:2.0.0",
+  "add_app_capability": "false",
+  "areas": [
+    {
+      "id": "AppWithoutUserRoleTab",
+      "text": "App Without User Role",
+      "description": "App Without User Role",
+      "url": "index",
+      "required_capabilities": []
+    }
+  ]
+}
