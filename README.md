@@ -54,6 +54,7 @@ single app](./MultiComponents)
 - [Allow user submitted QRadar Vulnerability Manager scans](./QuickScan)
 - [Use a REST method to populate a Dashboard Item](./RESTMethod)
 - [Use a SQLite database](./SQLite)
+- [Create an app without user role](./AppWithoutUserRole)
 
 ## Project details
 
