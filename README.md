@@ -41,6 +41,7 @@ content](./CustomColumnsOffenses)
 - [Globalized 'hello world' app](./HelloWorldGlobalized)
 - [Add hover over information to IP address data](./IPHoverOverMetaData)
 - [Designate how much memory an app needs](./Memory)
+- [Config Pages in different locations](./ConfigPageLocations)
 - [Use multiple UI components (Areas, Dashboards, Config Pages, GUI Actions, Page Scripts, Metadata Providers) in a
 single app](./MultiComponents)
 - [Support multi-tenancy](./Multitenancy)
