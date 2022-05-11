@@ -31,6 +31,11 @@
       "requires_oauth": false
     },
     {
+      "path": "./ConfigPageLocations",
+      "has_dependencies": false,
+      "requires_oauth": false
+    },
+    {
       "path": "./CustomColumnsAssets",
       "has_dependencies": false,
       "requires_oauth": false
