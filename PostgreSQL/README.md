@@ -125,7 +125,13 @@ You can run the following command to download the required rpm dependencies:
 docker run                                                    \
     -v $(pwd)/container/rpm:/rpm                              \
     registry.access.redhat.com/ubi8/ubi                       \
-    /bin/bash -c 'yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm && yum download postgresql10 postgresql10-libs postgresql10-contrib postgresql10-server --downloaddir=/rpm --resolve'
+    /bin/bash -c 'yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm && yum download -y postgresql10 postgresql10-libs postgresql10-contrib postgresql10-server --downloaddir=/rpm --resolve'
+```
+
+This will also download a version of OpenSSL which is not needed, and can be removed by executing:
+
+```bash
+rm container/rpm/openssl*-1.*.rpm
 ```
 
 ### Python
@@ -137,13 +143,10 @@ workspace.
 You can run the following command to download the required pip dependencies:
 
 ```bash
-pip download                     \
-    --only-binary=:all:          \
-    --platform manylinux1_x86_64 \
-    --dest container/pip         \
-    --no-deps                    \
-    --python-version=36          \
-    Flask-WTF==0.14.3 WTForms==2.3.3 psycopg2-binary==2.8.4
+docker run                                    \
+    -v $(pwd)/container/pip:/pip              \
+    registry.access.redhat.com/ubi8/python-36 \
+    pip download --no-deps --dest /pip Flask-WTF==0.14.3 WTForms==2.3.3 psycopg2-binary==2.8.6
 ```
 
 ## Running this app
