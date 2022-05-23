@@ -72,7 +72,7 @@ command in this directory:
 docker run                                    \
     -v $(pwd)/container/pip:/pip              \
     registry.access.redhat.com/ubi8/python-36 \
-    pip download --no-deps --dest /pip pytz==2020.1 Babel==2.8.0 Flask-Babel==1.0.0 speaklater==1.3
+    pip download --no-deps --dest /pip pytz==2022.1 Babel==2.10.1 Flask-Babel==1.0.0 speaklater==1.3
 ```
 
 This will download the required dependencies; these are referred to in the `ordering.txt` file in `container/pip` which

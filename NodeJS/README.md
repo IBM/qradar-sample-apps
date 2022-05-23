@@ -21,7 +21,7 @@ You can run the following command to download the required RPM dependencies:
 docker run                                                    \
     -v $(pwd)/container/rpm:/rpm                              \
     registry.access.redhat.com/ubi8/ubi                       \
-    yum download nodejs-10.21.0 npm-6.14.4 --downloaddir=/rpm
+    yum download nodejs npm --downloaddir=/rpm
 ```
 
 ### NPM

@@ -13,7 +13,7 @@ you have Docker installed):
 docker run                                                    \
     -v $(pwd)/container/rpm:/rpm                              \
     registry.access.redhat.com/ubi8/ubi                       \
-    yum download --resolve nginx-1.14.1 --downloaddir=/rpm
+    yum download --resolve nginx --downloaddir=/rpm
 ```
 
 This will download the required NGINX RPMs into the `container/rpm` directory. This directory also contains an

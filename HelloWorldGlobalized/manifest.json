@@ -3,7 +3,7 @@
   "description": "hellog11n.app.desc",
   "version": "1.0.3",
   "uuid": "3eae901e-c12a-11ea-b3de-0242ac130004",
-  "image": "qradar-app-base:2.0",
+  "image": "qradar-app-base:2.0.0",
   "areas": [
     {
       "id": "hellog11n.app.id",

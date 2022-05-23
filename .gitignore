@@ -2,3 +2,5 @@
 *.whl
 *.tar.gz
 node_modules/
+.qradar_app_uuid
+log/
