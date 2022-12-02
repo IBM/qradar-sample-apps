@@ -86,7 +86,9 @@ qapp deploy -p app.zip -q <qradar console ip> -u <qradar user>
 
 You will have to authorize this app for it to move from `CREATING` to `RUNNING`.
 
-Once the app has successfully installed an extension can be created, use SSH to log in to QRadar as the root user.
+Once the app has successfully installed an extension can be created.
+
+Use SSH to log in to QRadar as the root user.
 
 Run the content management export tool to generate an extension:
 
