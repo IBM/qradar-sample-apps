@@ -159,6 +159,11 @@
       "path": "./SQLite",
       "has_dependencies": true,
       "requires_oauth": false
+    },
+    {
+      "path": "./UninstallHooks",
+      "has_dependencies": false,
+      "requires_oauth": true
     }
   ]
 }
