@@ -1,0 +1,40 @@
+{
+  "name": "UninstallHooks",
+  "description": "Demonstrates using the uninstall hooks feature to clean up reference data",
+  "version": "1.0",
+  "uuid": "fb8d7241-deb2-4aad-a570-a81ecd20aa23",
+  "image": "qradar-app-base:2.1.8",
+  "areas": [
+    {
+      "id": "UninstallHookRefData",
+      "text": "Uninstall hook ref data",
+      "description": "Modify uninstall hook reference data",
+      "url": "index",
+      "required_capabilities": [
+        "ADMIN"
+      ]
+    }
+  ],
+  "rest_methods": [
+    {
+      "name": "uninstall_delete_reference_data",
+      "url": "/uninstall_delete_reference_data",
+      "method": "POST"
+    }
+  ],
+  "uninstall_hooks": [
+    {
+      "description": "Delete app reference data",
+      "rest_method": "uninstall_delete_reference_data",
+      "last_instance_only": "true"
+    }
+  ],
+  "authentication": {
+    "oauth2": {
+      "authorisation_flow": "CLIENT_CREDENTIALS",
+      "requested_capabilities": [
+        "ADMIN"
+      ]
+    }
+  }
+}
