@@ -39,7 +39,7 @@ def get_reference_data_value():
 
 def delete_reference_data():
     response = qpylib.REST('delete',
-                '/api/reference_data/maps/{0}'.format(REFERENCE_DATA_MAP_NAME))
+                           '/api/reference_data/maps/{0}'.format(REFERENCE_DATA_MAP_NAME))
     if response.status_code == 202:
         return {'result': 'success'}, 200
     return {'result': 'failed to delete reference data map'}, 500
