@@ -34,5 +34,4 @@ def set_reference_data():
 
 @viewsbp.route('/uninstall_delete_reference_data', methods=['POST'])
 def uninstall_delete_reference_data():
-    delete_reference_data()
-    return "OK!", 200
+    return delete_reference_data()
