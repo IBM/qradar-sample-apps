@@ -36,6 +36,11 @@ There is a REST method defined in the manifest. This is the endpoint that is cal
 When the uninstall hook is triggered a `POST` HTTP request will be sent to the `/uninstall_delete_reference_data`
 endpoint in the app.
 
+**Note**: the uninstall hook endpoint specified under rest_methods in the manifest json must:
+
+* Return a success HTTP response code between 200->299 (inclusive).
+* Return a valid JSON response, can be anything, but must be valid JSON, e.g. {} would be fine.
+
 ## Uninstall Hooks
 
 There is an uninstall hook defined in the manifest. This lets QRadar know which REST method to call on uninstall, and
