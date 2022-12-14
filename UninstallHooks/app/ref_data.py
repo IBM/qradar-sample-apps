@@ -28,6 +28,9 @@ def update_reference_data_value(value):
 def get_reference_data_value():
     response = qpylib.REST(
         'get', '/api/reference_data/maps/{0}'.format(REFERENCE_DATA_MAP_NAME))
+    if response.status_code == 404:
+        create_reference_data_map_if_not_exists()
+        return get_reference_data_value()
     resp_data = response.json()
     data = resp_data['data']
     reference = data[REFERENCE_DATA_MAP_KEY]
@@ -35,8 +38,12 @@ def get_reference_data_value():
 
 
 def delete_reference_data():
-    qpylib.REST('delete',
-                '/api/reference_data/maps/{0}'.format(REFERENCE_DATA_MAP_NAME))
+    response = qpylib.REST(
+        'delete',
+        '/api/reference_data/maps/{0}'.format(REFERENCE_DATA_MAP_NAME))
+    if response.status_code == 202:
+        return {'result': 'success'}, 200
+    return {'result': 'failed to delete reference data map'}, 500
 
 
 def create_reference_data_key_if_not_exists(data):
