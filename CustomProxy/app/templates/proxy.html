@@ -1,0 +1,164 @@
+<!--
+Copyright 2021 IBM Corporation
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Custom proxy</title>
+</head>
+<body>
+  <script>
+    function clearSaveStatus()
+    {
+      var save_status = document.getElementById("save-status")
+      if(save_status)
+      {
+        save_status.innerHTML = "";
+      }
+    }
+    function setSaveStatus(status)
+    {
+      var save_status = document.getElementById("save-status")
+      if(save_status)
+      {
+        save_status.innerHTML = "<b>" + status + "</b>";
+      }
+      return true;
+    }
+    function setSearchStatus(status)
+    {
+      var search_status = document.getElementById("search-status")
+      if(search_status)
+      {
+        search_status.innerHTML = "<b>" + status + "</b>";
+      }
+      return true;
+    }
+  </script>
+  <h1 id="title">Custom proxy</h1>
+  <form id="proxy-form" method="POST" enctype="multipart/form-data" action="save_proxy_settings" onsubmit="return setSaveStatus('Saving, please wait...')">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+    <h2 id="proxy-title">Enter your proxy details</h2>
+    <table>
+    <tbody>
+    <tr>
+    <td>
+    <label for="proxy-protocol">Proxy Protocol:</label>
+    </td>
+    <td>
+    <select id="proxy-protocol" name="proxy-protocol" oninput="clearSaveStatus()">
+      {% if proxy_settings['protocol'] and proxy_settings['protocol'] == 'http' %}
+        <option value="http" selected>HTTP</option>
+      {% else %} 
+        <option value="http">HTTP</option>
+      {% endif %}
+      {% if proxy_settings['protocol'] and proxy_settings['protocol'] == 'https' %}
+        <option value="https" selected>HTTPS</option>
+      {% else %} 
+        <option value="https">HTTPS</option>
+      {% endif %}
+      </select>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <label for="proxy-server">Proxy Server:</label>
+    </td>
+    <td>
+    <input type="text" id="proxy-server" name="proxy-server" style="width:350px" value="{{ proxy_settings['server'] }}" oninput="clearSaveStatus()">
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <label for="proxy-port">Proxy Port:</label>
+    </td>
+    <td>
+    <input type="text" id="proxy-port" name="proxy-port" style="width:50px" value="{{ proxy_settings['port'] }}" oninput="clearSaveStatus()">
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <label for="proxy-username">Proxy Username:</label>
+    </td>
+    <td>
+    <input type="text" id="proxy-username" name="proxy-username" style="width:200px" value="{{ proxy_settings['username'] }}" oninput="clearSaveStatus()">
+    </td>
+    </tr>
+    <tr>
+    <td>  
+    <label for="proxy-password">Proxy Password:</label>
+    </td>
+    <td>
+    <input type="password" id="proxy-password" name="proxy-password" style="width:200px" value="{{ proxy_settings['password'] }}" oninput="clearSaveStatus()">
+    </td>
+    </tr>
+    <tr><td></td><td></td></tr>
+    <tr><td></td><td></td></tr>
+    <tr>
+    <td>
+    <input id="proxy-submit" type="submit" value="Save" />
+    </td>
+    </tr>
+    </tbody>
+    </table>
+  </form>
+  <div id="save-status">
+    {% if save_status %}
+       <b>{{ save_status }}</b>
+    {% endif %} 
+  </div>
+  <form id="http-form" method="GET" action="get_proxy_settings" onsubmit="return setSearchStatus('Performing search, please wait...')">
+    <h2 id="http-title">Make a HTTP GET request from app backend</h2>
+    <h3 id="upload-test">Test proxy settings</h3>
+    <h4>Enter a url that requires a proxy to connect to it</h4>
+    <div>
+      <label>Address to send a HTTP GET request to</label>
+      <input id="http-input" type="url" name="address" style="width:350px" placeholder="https://..." />
+    </div>
+    <br/>
+    <input id="http-submit" type="submit" value="Test" />
+  </form>
+  {% if url %}
+  <br/>
+  <div id="search-status"></div>
+  <div>
+    <h2 id="result-title">HTTP request result</h2>
+    <div>
+      <label>Address:</label>
+      <span id="result-url">{{ url }}</span>
+    </div>
+    <div>
+      {% if status_code==200 %}
+      <span id="success">Test Successful</span>
+      {% else %} 
+      <span id="unsuccessful">There was a problem with the test</span>
+      {% endif %} 
+    </div>
+    <div>
+      <label>Status:</label>
+      <span id="result-status">{{ status_code }}</span>
+    </div>
+    <div>
+      <label>Result:</label>
+      <span id="result-data">{{ result }}</span>
+    </div>
+  </div>
+  {% else %} 
+    <br/>
+    <div id="search-status"></div>
+  {% endif %}
+</body>
+</html>
