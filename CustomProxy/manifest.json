@@ -3,9 +3,6 @@
   "description": "App showing how to add a custom proxy",
   "version": "1.0",
   "image": "qradar-app-base:2.0.4",
-  "resources": {
-    "memory": 100
-  },
   "areas": [
     {
       "id": "QProxy",

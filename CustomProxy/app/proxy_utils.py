@@ -1,8 +1,16 @@
-# Licensed Materials - Property of IBM
-# 5725I71-CC011829
-# (C) Copyright IBM Corp. 2015, 2020. All Rights Reserved.
-# US Government Users Restricted Rights - Use, duplication or
-# disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+# Copyright 2023 IBM Corporation
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
 import json
 import os
@@ -58,14 +66,19 @@ def get_proxy_settings_from_json():
             with open(PROXY_SETTINGS_JSON_FILE, 'r') as json_file:
                 proxy_settings = json.load(json_file)
                 if PASSWORD in proxy_settings:
-                    encryption = Encryption({'name': PROXY_PASSWORD, 'user': USER})
+                    encryption = Encryption({
+                        'name': PROXY_PASSWORD,
+                        'user': USER
+                    })
                     decrypted_proxy_password = encryption.decrypt()
                     proxy_settings[PASSWORD] = decrypted_proxy_password
         except OSError as os_error:
-            qpylib.log(f'Unable to read proxy settings json file, {os_error}', level='error')
-        except EncryptionError as encryption_error:
-            qpylib.log(f'Unable to decrypt proxy password in proxy settings json file, {encryption_error}',
+            qpylib.log(f'Unable to read proxy settings json file, {os_error}',
                        level='error')
+        except EncryptionError as encryption_error:
+            qpylib.log(
+                f'Unable to decrypt proxy password in proxy settings json file, {encryption_error}',
+                level='error')
     return proxy_settings
 
 
@@ -74,17 +87,20 @@ def write_proxy_settings_to_json(proxy_settings):
         encrypted_proxy_settings = proxy_settings.copy()
         if PASSWORD in encrypted_proxy_settings:
             encryption = Encryption({'name': PROXY_PASSWORD, 'user': USER})
-            encrypted_proxy_password = encryption.encrypt(encrypted_proxy_settings[PASSWORD])
+            encrypted_proxy_password = encryption.encrypt(
+                encrypted_proxy_settings[PASSWORD])
             encrypted_proxy_settings[PASSWORD] = encrypted_proxy_password
         with open(PROXY_SETTINGS_JSON_FILE, 'w') as json_file:
             json.dump(encrypted_proxy_settings, json_file)
             return True
     except OSError as os_error:
-        qpylib.log(f'Unable to write proxy settings to json file, {os_error}', level='error')
+        qpylib.log(f'Unable to write proxy settings to json file, {os_error}',
+                   level='error')
         return False
     except EncryptionError as encryption_error:
-        qpylib.log(f'Unable to encrypt proxy password to add it to proxy settings json file, {encryption_error}',
-                   level='error')
+        qpylib.log(
+            f'Unable to encrypt proxy password to add it to proxy settings json file, {encryption_error}',
+            level='error')
         return False
 
 
@@ -111,6 +127,10 @@ def set_proxy_env_variables(proxy_settings):
             os.environ[HTTP_PROXY] = proxy_url
             os.environ[HTTPS_PROXY] = proxy_url
         else:
-            qpylib.log('Unable to build proxy url, skipping setting environment variable', level='error')
+            qpylib.log(
+                'Unable to build proxy url, skipping setting environment variable',
+                level='error')
     else:
-        qpylib.log('proxy settings was empty, skipping setting environment variables', level='debug')
+        qpylib.log(
+            'proxy settings was empty, skipping setting environment variables',
+            level='debug')

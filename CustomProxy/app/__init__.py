@@ -1,19 +1,26 @@
-# Licensed Materials - Property of IBM
-# 5725I71-CC011829
-# (C) Copyright IBM Corp. 2015, 2020. All Rights Reserved.
-# US Government Users Restricted Rights - Use, duplication or
-# disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+# Copyright 2023 IBM Corporation
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
 __author__ = 'IBM'
 
 import os
-import json
+import proxy_utils
 
 from flask import Flask
 from flask_session import Session
 from flask_wtf.csrf import CSRFProtect
 from qpylib import qpylib
-from . import proxy_utils
 
 
 # Flask application factory.
@@ -67,8 +74,6 @@ def create_app():
     #   https://flask.palletsprojects.com/en/1.1.x/tutorial/views
     from . import views
     qflask.register_blueprint(views.viewsbp)
-    from . import dev
-    qflask.register_blueprint(dev.devbp)
 
     # Set proxy settings if present in file in http_proxy and https_proxy environment variables
     proxy_settings = proxy_utils.get_proxy_settings_from_json()
