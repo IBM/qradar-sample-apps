@@ -15,12 +15,12 @@
 __author__ = 'IBM'
 
 import os
-import proxy_utils
 
 from flask import Flask
 from flask_session import Session
 from flask_wtf.csrf import CSRFProtect
 from qpylib import qpylib
+from .proxy_utils import get_proxy_settings_from_json, set_proxy_env_variables
 
 
 # Flask application factory.
@@ -76,7 +76,7 @@ def create_app():
     qflask.register_blueprint(views.viewsbp)
 
     # Set proxy settings if present in file in http_proxy and https_proxy environment variables
-    proxy_settings = proxy_utils.get_proxy_settings_from_json()
-    proxy_utils.set_proxy_env_variables(proxy_settings)
+    proxy_settings = get_proxy_settings_from_json()
+    set_proxy_env_variables(proxy_settings)
 
     return qflask

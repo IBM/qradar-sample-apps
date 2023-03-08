@@ -12,9 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import proxy_utils
 import requests
 
+from .proxy_utils import get_proxy_settings_from_json, get_proxy_settings_from_form
+from .proxy_utils import set_proxy_env_variables, write_proxy_settings_to_json
 from requests.exceptions import ConnectTimeout, ProxyError, SSLError
 from flask import Blueprint, render_template, request, redirect, session, url_for
 
@@ -38,7 +39,7 @@ viewsbp = Blueprint('viewsbp', __name__, url_prefix='/')
 @viewsbp.route('/get_proxy_settings')
 def get_proxy_settings():
     save_status = get_save_status_from_session()
-    proxy_settings = proxy_utils.get_proxy_settings_from_json()
+    proxy_settings = get_proxy_settings_from_json()
     url = request.args.get('address')
     if url:
         return perform_url_request(url, proxy_settings, save_status)
@@ -49,9 +50,9 @@ def get_proxy_settings():
 
 @viewsbp.route('/save_proxy_settings', methods=['POST'])
 def save_proxy_settings():
-    proxy_settings = proxy_utils.get_proxy_settings_from_form()
-    if proxy_utils.write_proxy_settings_to_json(proxy_settings):
-        proxy_utils.set_proxy_env_variables(proxy_settings)
+    proxy_settings = get_proxy_settings_from_form()
+    if write_proxy_settings_to_json(proxy_settings):
+        set_proxy_env_variables(proxy_settings)
         session[SESSION_SAVE_STATUS] = SAVE_SUCCESS_MESSAGE
     else:
         session[SESSION_SAVE_STATUS] = SAVE_FAILURE_MESSAGE
