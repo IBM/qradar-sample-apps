@@ -56,6 +56,11 @@
       "requires_oauth": false
     },
     {
+      "path": "./CustomProxy",
+      "has_dependencies": true,
+      "requires_oauth": false
+    },
+    {
       "path": "./DashboardWithImage",
       "has_dependencies": false,
       "requires_oauth": false

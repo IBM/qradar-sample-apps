@@ -1,0 +1,16 @@
+{
+  "name": "Custom Proxy",
+  "description": "App showing how to add a custom proxy",
+  "version": "1.0",
+  "image": "qradar-app-base:2.0.4",
+  "areas": [
+    {
+      "id": "QProxy",
+      "text": "Custom Proxy",
+      "description": "Custom proxy area",
+      "url": "get_proxy_settings",
+      "required_capabilities": []
+    }
+  ],
+  "uuid": "de7c7b23-638f-47da-9959-00d9ef8ee12a"
+}
