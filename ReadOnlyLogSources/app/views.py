@@ -23,10 +23,10 @@ viewsbp = Blueprint('viewsbp', __name__, url_prefix='/')
 @viewsbp.route('/index')
 def index():
     user_capabilities = get_user_capabilities()
-    return render_template('index.html',
-                           is_read_only_user=is_readonly_logsource_user(
-                               user_capabilities),
-                           has_capabilities=has_logsource_capabilities(user_capabilities))
+    return render_template(
+        'index.html',
+        is_read_only_user=is_readonly_logsource_user(user_capabilities),
+        has_capabilities=has_logsource_capabilities(user_capabilities))
 
 
 def get_user_capabilities():
