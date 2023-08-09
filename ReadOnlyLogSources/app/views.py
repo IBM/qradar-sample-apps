@@ -40,8 +40,9 @@ def get_user_capabilities():
 def is_readonly_logsource_user(capabilities):
     for capability in capabilities:
         capability_name = capability['name']
-        if capability_name == 'SYSTEM.LOGSOURCE' or capability_name == 'ADMIN' \
-                or capability_name == 'ADMINMANAGER' or capability_name == 'SAASADMIN':
+        if capability_name in {
+                'SYSTEM.LOGSOURCE', 'ADMIN', 'ADMINMANAGER', 'SAASADMIN'
+        }:
             return False
     return True
 
@@ -49,8 +50,9 @@ def is_readonly_logsource_user(capabilities):
 def has_logsource_capabilities(capabilities):
     for capability in capabilities:
         capability_name = capability['name']
-        if capability_name == 'SYSTEM.LOGSOURCE' or capability_name == 'ADMIN' \
-                or capability_name == 'ADMINMANAGER' or capability_name == 'SAASADMIN' \
-                or capability_name == 'READONLYCONFIGURATION.LOGSOURCES.VIEW':
+        if capability_name in {
+                'SYSTEM.LOGSOURCE', 'ADMIN', 'ADMINMANAGER', 'SAASADMIN',
+                'READONLYCONFIGURATION.LOGSOURCES.VIEW'
+        }:
             return True
     return False
