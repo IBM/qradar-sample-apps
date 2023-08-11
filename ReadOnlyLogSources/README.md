@@ -11,7 +11,8 @@ The sample app provides three buttons:
 3. A clear button to clear the table.
 
 If the user has a user role with only the read-only view log sources capability they will only have the view and clear buttons enabled.
-If the user doesn't have a user role with either admin capabilities, the manage log source capability or the read-only view log sources capability they will get a message saying they don't have the required capabilities and no buttons will be displayed.
+If the user doesn't have a user role with either admin capabilities, the manage log source capability or the read-only view log sources
+capability they will get a message saying they don't have the required capabilities and no buttons will be displayed.
 If they have all of the above capabilities in their user role they will have all three buttons enabled.
 
 ## Running this app
